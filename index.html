@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>You're Invited | Teachers' Day 2026</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+::selection{
+    background:#e0a800;
+    color:#fff;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+:root{
+    --primary:#0d5460;
+    --primary-light:#176b73;
+    --secondary:#e0a800;
+    --accent:#ff6b6b;
+    --text:#17434b;
+    --text-light:#35565b;
+    --glass:rgba(255,255,255,.65);
+    --glass-dark:rgba(0,0,0,.08);
+    --success:#2ecc71;
+    --gradient1:linear-gradient(-45deg,#4d8cc0,#66e7d2,#5d3280,#20ddbecc);
+}
+
+body{
+    min-height:100vh;
+    padding-bottom:100px;
+    overflow-x:hidden;
+    color:var(--text);
+    background:var(--gradient1);
+    background-size:400% 400%;
+    animation:bg 15s ease infinite;
+    transition:.5s;
+    font-weight:500;
+}
+
+@keyframes bg{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+.loader{
+    position:fixed;
+    inset:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#fff;
+    z-index:9999;
+    animation:hideLoader 2s forwards;
+}
+
+.loader span{
+    font-size:50px;
+    animation:spin 1s infinite;
+}
+
+@keyframes spin{
+    50%{
+        transform:rotate(180deg);
+    }
+}
+
+@keyframes hideLoader{
+    0%,80%{
+        opacity:1;
+    }
+    100%{
+        opacity:0;
+        visibility:hidden;
+    }
+}
+
+.circle{
+    position:fixed;
+    border-radius:50%;
+    background:rgba(255,255,255,.35);
+    filter:blur(2px);
+    animation:float 8s infinite;
+}
+
+.c1{
+    width:180px;
+    height:180px;
+    top:5%;
+    left:5%;
+}
+
+.c2{
+    width:230px;
+    height:230px;
+    right:5%;
+    bottom:10%;
+}
+
+@keyframes float{
+    50%{
+        transform:translateY(-40px);
+    }
+}
+
+.hero{
+    text-align:center;
+    padding:45px 20px 20px;
+    animation:show 1s;
+    position:relative;
+    z-index:2;
+}
+
+@keyframes show{
+    from{
+        opacity:0;
+        transform:translateY(-40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.logo{
+    position:relative;
+    display:inline-block;
+}
+
+.logo::before{
+    content:"";
+    position:absolute;
+    width:150px;
+    height:150px;
+    background:white;
+    opacity:.5;
+    filter:blur(30px);
+    border-radius:50%;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    z-index:-1;
+}
+
+.logo img{
+    width:160px;
+    height:160px;
+    border-radius:50%;
+    background:white;
+    padding:8px;
+    object-fit:contain;
+    box-shadow:0 15px 45px rgba(0,0,0,.25);
+    animation:logoFloat 4s ease-in-out infinite;
+    transition:.4s;
+}
+
+.logo img:hover{
+    transform:scale(1.15) rotateY(10deg);
+}
+
+@keyframes logoFloat{
+    50%{
+        transform:translateY(-10px);
+    }
+}
+
+.hero h1{
+    margin-top:18px;
+    font-size:48px;
+    font-weight:900;
+    color:var(--primary);
+    text-shadow:0 6px 20px rgba(13,84,96,.25);
+}
+
+.hero p{
+    margin-top:12px;
+    font-size:18px;
+    color:var(--text-light);
+    font-weight:600;
+}
+/* ===============================
+   Glass Container
+=================================*/
+
+.glass{
+    margin:20px;
+    padding:30px;
+    background:var(--glass);
+    backdrop-filter:blur(30px) saturate(180%);
+    border-radius:28px;
+    border:1.5px solid rgba(255,255,255,.9);
+    box-shadow:
+        0 25px 70px rgba(0,0,0,.14),
+        inset 0 1px 1px rgba(255,255,255,.8);
+    transition:.5s;
+    position:relative;
+    overflow:hidden;
+}
+
+.glass::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    border-radius:28px;
+    background:linear-gradient(
+        135deg,
+        rgba(255,255,255,.25),
+        transparent 60%);
+    opacity:0;
+    transition:.4s;
+}
+
+.glass:hover::after{
+    opacity:1;
+}
+
+.glass:hover{
+    transform:translateY(-10px);
+    box-shadow:
+        0 40px 90px rgba(0,0,0,.18);
+}
+
+h2{
+    text-align:center;
+    margin-bottom:30px;
+    color:var(--primary);
+    font-size:32px;
+    font-weight:800;
+}
+
+/* ===============================
+   Cards
+=================================*/
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+}
+
+.card{
+    padding:30px 20px;
+    text-align:center;
+    text-decoration:none;
+    color:var(--primary);
+    font-weight:700;
+    font-size:19px;
+    border-radius:24px;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,.9),
+            rgba(255,255,255,.75));
+    border:1px solid rgba(255,255,255,.9);
+    box-shadow:
+        0 18px 45px rgba(0,0,0,.12);
+    transition:.45s;
+    position:relative;
+    overflow:hidden;
+}
+
+.card::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,.35),
+            transparent 60%);
+    opacity:0;
+    transition:.4s;
+}
+
+.card:hover::before{
+    opacity:1;
+}
+
+.card:hover{
+    transform:
+        translateY(-14px)
+        scale(1.06);
+    color:var(--secondary);
+}
+
+/* ===============================
+   Invitation Box
+=================================*/
+
+.letter{
+    font-size:18px;
+    line-height:2;
+    color:var(--text-light);
+    text-align:justify;
+}
+
+.details{
+    margin:25px 0;
+    padding:22px;
+    border-radius:18px;
+    background:
+        rgba(255,248,181,.55);
+    border-left:6px solid var(--secondary);
+}
+
+.details p{
+    margin:8px 0;
+    font-size:17px;
+}
+
+/* ===============================
+   Announcement
+=================================*/
+
+.notice{
+    padding:20px;
+    margin:16px 0;
+    border-radius:18px;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,.88),
+            rgba(255,255,255,.72));
+    border-left:5px solid var(--secondary);
+    transition:.35s;
+}
+
+.notice:hover{
+    transform:translateX(10px);
+}
+
+/* ===============================
+   Countdown
+=================================*/
+
+.countdown{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.time-box{
+    min-width:90px;
+    padding:24px 16px;
+    border-radius:20px;
+    background:white;
+    text-align:center;
+    font-weight:700;
+    box-shadow:
+        0 12px 30px rgba(0,0,0,.12);
+}
+
+.time-box span{
+    display:block;
+    font-size:34px;
+    color:var(--secondary);
+    font-weight:800;
+}
+/* ===============================
+   Footer
+=================================*/
+
+footer{
+    text-align:center;
+    padding:30px;
+    color:var(--primary);
+    font-weight:700;
+    font-size:18px;
+}
+
+/* ===============================
+   Bottom Navigation
+=================================*/
+
+.bottom-nav{
+    position:fixed;
+    bottom:20px;
+    left:50%;
+    transform:translateX(-50%);
+    width:92%;
+    max-width:360px;
+    display:flex;
+    justify-content:space-around;
+    padding:18px 14px;
+    background:rgba(255,255,255,.92);
+    backdrop-filter:blur(30px);
+    border-radius:50px;
+    border:1px solid rgba(255,255,255,.95);
+    box-shadow:0 18px 55px rgba(0,0,0,.18);
+    z-index:100;
+}
+
+.bottom-nav a{
+    font-size:28px;
+    text-decoration:none;
+    color:var(--primary);
+    transition:.35s;
+    padding:8px 10px;
+    border-radius:12px;
+}
+
+.bottom-nav a:hover{
+    transform:translateY(-10px) scale(1.15);
+    color:var(--secondary);
+    background:rgba(224,168,0,.12);
+}
+
+/* ===============================
+   Reveal Animation
+=================================*/
+
+.reveal{
+    opacity:0;
+    transform:translateY(40px);
+    transition:1s;
+}
+
+.reveal.active{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* ===============================
+   Responsive
+=================================*/
+
+@media(max-width:700px){
+
+.cards{
+    grid-template-columns:1fr;
+}
+
+.hero h1{
+    font-size:32px;
+}
+
+.hero p{
+    font-size:16px;
+}
+
+.glass{
+    margin:15px;
+    padding:22px;
+}
+
+.time-box{
+    min-width:70px;
+}
+
+.bottom-nav a{
+    font-size:24px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="loader">
+    <span>💌</span>
+</div>
+
+<div class="circle c1"></div>
+<div class="circle c2"></div>
+
+<section class="hero">
+
+    <div class="logo">
+        <img src="2.png" alt="School Logo">
+    </div>
+
+    <h1>
+        💌 You're Invited
+    </h1>
+
+    <p>
+        Join Us in Celebrating Teachers' Day 2026
+    </p>
+
+</section>
+
+<!-- =========================
+     COUNTDOWN
+========================= -->
+
+<div class="glass reveal">
+
+<h2>
+⏳ Countdown to the Celebration
+</h2>
+
+<div class="countdown">
+
+<div class="time-box">
+<span id="days">00</span>
+Days
+</div>
+
+<div class="time-box">
+<span id="hours">00</span>
+Hours
+</div>
+
+<div class="time-box">
+<span id="minutes">00</span>
+Minutes
+</div>
+
+<div class="time-box">
+<span id="seconds">00</span>
+Seconds
+</div>
+
+</div>
+
+</div>
+<!-- =========================
+     INVITATION LETTER
+========================= -->
+
+<div class="glass reveal">
+
+<h2>
+💌 Invitation Letter
+</h2>
+
+<div class="letter">
+
+<p>
+
+<strong>Dear Respected Principal, Teachers and APF Staff,</strong>
+
+</p>
+
+<p>
+
+With great pleasure and heartfelt respect, we cordially invite you to join us in celebrating
+<strong>Teachers' Day 2026</strong>.
+
+Your dedication, guidance, encouragement, and unwavering support have shaped our knowledge,
+built our confidence, and inspired us to become better individuals. This special occasion is
+our opportunity to express sincere gratitude for everything you have done for us.
+
+</p>
+
+<p>
+
+We would be truly honored by your gracious presence. Your attendance will make this celebration
+more joyful, meaningful, and memorable for every student.
+
+</p>
+
+<div class="details">
+
+<p><strong>📅 Date:</strong> 29 July 2026</p>
+
+<p><strong>🕙 Time:</strong> 10:00 AM</p>
+
+<p><strong>📍 Venue:</strong> School Assembly Hall</p>
+
+<p><strong>🎉 Occasion:</strong> Teachers' Day Celebration 2026</p>
+
+</div>
+
+<p>
+
+The celebration will include welcome speeches, cultural performances, appreciation programs,
+student presentations, music, memorable moments, and a heartfelt tribute to all our respected
+teachers.
+
+</p>
+
+<p>
+
+We sincerely hope you will honor us with your valuable presence and blessings as we celebrate
+this special day together.
+
+</p>
+
+<br>
+
+<div style="text-align:right;line-height:2;">
+
+<strong>With Respect & Gratitude,</strong><br>
+
+Students of the 16<sup>th</sup> Batch
+
+</div>
+
+</div>
+
+</div>
+
+<!-- =========================
+     ANNOUNCEMENTS
+========================= -->
+
+<div class="glass reveal">
+
+<h2>
+📢 Event Highlights
+</h2>
+
+<div class="notice">
+🎓 Welcome Ceremony & Opening Speech
+</div>
+
+<div class="notice">
+🎭 Cultural Performances by Students
+</div>
+
+<div class="notice">
+🎤 Teacher Appreciation Program
+</div>
+
+<div class="notice">
+📸 Group Photo & Refreshments
+</div>
+
+</div>
+<!-- =========================
+     EXPLORE CELEBRATION
+========================= -->
+
+<div class="glass reveal">
+
+<h2>
+✨ Explore Celebration
+</h2>
+
+<div class="cards">
+
+<a href="program.html" class="card">
+
+🎉
+
+<br><br>
+
+Program
+
+</a>
+
+<a href="invitation.html" class="card">
+
+💌
+
+<br><br>
+
+Invitation
+
+</a>
+
+<a href="memories.html" class="card">
+
+📷
+
+<br><br>
+
+Memories
+
+</a>
+
+<a href="staff.html" class="card">
+
+👮
+
+<br><br>
+
+APF Staff
+
+</a>
+
+</div>
+
+</div>
+
+<!-- =========================
+     SPECIAL MESSAGE
+========================= -->
+
+<div class="glass reveal">
+
+<h2>
+🌸 A Message of Gratitude
+</h2>
+
+<p style="text-align:center;font-size:20px;line-height:2;color:var(--text-light);">
+
+"A great teacher inspires hope, ignites imagination,
+and encourages us to achieve our dreams."
+
+</p>
+
+<br>
+
+<p style="text-align:center;font-size:18px;line-height:2;">
+
+Thank you for your patience, dedication,
+guidance, and unwavering support.
+
+Your wisdom continues to shape our future,
+and your kindness leaves a lasting impact on every student.
+
+</p>
+
+</div>
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+✨ Thank You For Being Our Inspiration ✨
+
+</footer>
+
+<!-- =========================
+     BOTTOM NAVIGATION
+========================= -->
+
+<div class="bottom-nav">
+
+<a href="index.html">
+🏠
+</a>
+
+<a href="program.html">
+🎉
+</a>
+
+<a href="invitation.html">
+💌
+</a>
+
+<a href="staff.html">
+👮
+</a>
+
+</div>
+
+<!-- =========================
+     AUDIO
+========================= -->
+
+<audio id="music" loop>
+
+<source src="music.mp3" type="audio/mpeg">
+
+</audio>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+
+<script>
+// ==============================
+// Celebration Confetti
+// ==============================
+
+window.onload = function () {
+
+    setTimeout(() => {
+
+        confetti({
+            particleCount: 200,
+            spread: 120,
+            origin: { y: 0.6 }
+        });
+
+    }, 800);
+
+};
+
+// ==============================
+// Countdown Timer
+// ==============================
+
+const eventDate = new Date("July 29, 2026 10:00:00").getTime();
+
+setInterval(function () {
+
+    const now = new Date().getTime();
+
+    const distance = eventDate - now;
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+
+    const hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24))
+        /
+        (1000 * 60 * 60)
+    );
+
+    const minutes = Math.floor(
+        (distance % (1000 * 60 * 60))
+        /
+        (1000 * 60)
+    );
+
+    const seconds = Math.floor(
+        (distance % (1000 * 60))
+        /
+        1000
+    );
+
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("seconds").innerHTML = seconds;
+
+}, 1000);
+
+// ==============================
+// Reveal Animation
+// ==============================
+
+function reveal() {
+
+    const items = document.querySelectorAll(".reveal");
+
+    items.forEach(item => {
+
+        const windowHeight = window.innerHeight;
+
+        const top = item.getBoundingClientRect().top;
+
+        const visible = 120;
+
+        if (top < windowHeight - visible) {
+
+            item.classList.add("active");
+
+        }
+
+    });
+
+}
+
+window.addEventListener("scroll", reveal);
+
+reveal();
+
+// ==============================
+// Card Click Animation
+// ==============================
+
+document.querySelectorAll(".card").forEach(card => {
+
+    card.addEventListener("click", () => {
+
+        card.style.transform = "scale(.95)";
+
+        setTimeout(() => {
+
+            card.style.transform = "";
+
+        }, 150);
+
+    });
+
+});
+
+// ==============================
+// Smooth Scroll to Top
+// ==============================
+
+function topPage() {
+
+    window.scrollTo({
+
+        top: 0,
+
+        behavior: "smooth"
+
+    });
+
+}
+
+// ==============================
+// Countdown Finished
+// ==============================
+
+if (eventDate < new Date().getTime()) {
+
+    document.querySelector(".countdown").innerHTML =
+    "<h2>🎉 Happy Teachers' Day! 🎉</h2>";
+
+}
+
+</script>
+
+</body>
+
+</html>
