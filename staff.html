@@ -3,12 +3,12 @@
 
 <head>
 
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>APF Staff Team 2026</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
@@ -21,213 +21,409 @@
 }
 
 :root{
+
     --primary:#0d5460;
     --primary-light:#176b73;
-    --secondary:#e0a800;
+    --secondary:#f2b705;
     --text:#17434b;
-    --text-light:#35565b;
+    --text-light:#49636a;
+
 }
 
 body{
-    min-height:100vh;
-    padding:20px 15px 120px;
-    overflow-x:hidden;
+
     color:var(--text);
-    background:linear-gradient(45deg,#d5d832,#19d697,#8ff0d4,#775097,#ffd6e8,#ffffff);
-    background-size:600% 600%;
-    animation:bg 20s ease infinite;
+
+    overflow-x:hidden;
+
+    min-height:100vh;
+
+    padding:20px 15px 120px;
+
+    background:
+    linear-gradient(-45deg,
+    #7ad4d8,
+    #d8ff86,
+    #9be3ff,
+    #ffd1f0,
+    #ffffff);
+
+    background-size:500% 500%;
+
+    animation:bgMove 18s ease infinite;
+
 }
 
-@keyframes bg{
-    0%{background-position:0% 50%}
-    50%{background-position:100% 50%}
-    100%{background-position:0% 50%}
+@keyframes bgMove{
+
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+
 }
 
 .header{
+
     text-align:center;
-    margin:30px 0 45px;
+
+    margin:30px auto 50px;
+
+    animation:fadeDown .8s;
+
+}
+
+@keyframes fadeDown{
+
+from{
+opacity:0;
+transform:translateY(-30px);
+}
+
+to{
+opacity:1;
+transform:none;
+}
+
 }
 
 .logo{
-    display:flex;
-    justify-content:center;
+
+display:flex;
+justify-content:center;
+
 }
 
 .logo img{
-    width:160px;
-    height:160px;
-    object-fit:contain;
-    padding:12px;
-    border-radius:50%;
-    background:white;
-    border:5px solid white;
-    box-shadow:0 20px 60px rgba(0,0,0,.2);
+
+width:170px;
+height:170px;
+
+object-fit:contain;
+
+background:#fff;
+
+padding:10px;
+
+border-radius:50%;
+
+border:6px solid white;
+
+box-shadow:
+0 20px 60px rgba(0,0,0,.18);
+
+transition:.4s;
+
 }
 
+.logo img:hover{
+
+transform:scale(1.05) rotate(5deg);
+
+}
 
 h1{
-    margin-top:20px;
-    font-size:44px;
-    font-weight:900;
-    color:var(--primary);
-}
 
+margin-top:22px;
+
+font-size:45px;
+
+font-weight:800;
+
+letter-spacing:.5px;
+
+color:var(--primary);
+
+text-shadow:0 3px 12px rgba(0,0,0,.08);
+
+}
 
 .subtitle{
-    color:var(--text-light);
-    font-size:17px;
-    font-weight:600;
-    margin-top:10px;
-}
 
+margin-top:12px;
+
+font-size:17px;
+
+font-weight:500;
+
+color:var(--text-light);
+
+max-width:700px;
+
+margin-left:auto;
+margin-right:auto;
+
+line-height:1.7;
+
+}
 
 .teachers{
 
-    width:96%;
-    max-width:1200px;
-    margin:auto;
+width:96%;
 
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:32px;
+max-width:1250px;
+
+margin:auto;
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(270px,1fr));
+
+gap:32px;
 
 }
-
 
 .card{
 
-    background:rgba(255,255,255,.85);
-    backdrop-filter:blur(25px);
+position:relative;
 
-    border-radius:28px;
+background:rgba(255,255,255,.82);
 
-    padding:35px 25px;
+backdrop-filter:blur(18px);
 
-    text-align:center;
+border:1px solid rgba(255,255,255,.6);
 
-    box-shadow:
-    0 25px 70px rgba(0,0,0,.14);
+border-radius:30px;
 
-    transition:.5s;
+padding:35px 25px;
 
-}
+text-align:center;
 
+overflow:hidden;
 
-.card:hover{
+transition:.45s;
 
-    transform:translateY(-15px) scale(1.04);
+box-shadow:
 
-}
-
-
-.teacher-img{
-
-    width:160px;
-    height:160px;
-
-    border-radius:50%;
-
-    object-fit:cover;
-
-    border:6px solid white;
-
-    box-shadow:
-    0 15px 45px rgba(0,0,0,.22);
+0 20px 60px rgba(0,0,0,.10);
 
 }
 
+.card::before{
 
-h2{
+content:"";
 
-    margin:20px 0 10px;
+position:absolute;
 
-    color:var(--primary);
+top:-70px;
+left:-70px;
 
-    font-size:22px;
+width:140px;
+height:140px;
 
-}
+background:rgba(255,255,255,.45);
 
-
-.role{
-
-    color:var(--text-light);
-
-    font-size:16px;
-
-    font-weight:600;
+border-radius:50%;
 
 }
 
+.card::after{
 
-.badge{
+content:"";
 
-    display:inline-block;
+position:absolute;
 
-    margin-top:18px;
-
-    padding:12px 28px;
-
-
-    margin:60px 0 20px;
-
-    color:var(--primary);
-
-    font-weight:700;
-
-}
-
-
-.bottom-nav{
-
-    position:fixed;
-
-    bottom:20px;
-
-    left:50%;
-
-    transform:translateX(-50%);
-
-    width:92%;
-
-    max-width:360px;
-
-    display:flex;
-
-    justify-content:space-around;
-
-    padding:18px;
-
-    background:white;
-
-    border-radius:50px;
-
-    box-shadow:0 20px 60px rgba(0,0,0,.17);
-
-}
-
-
-.bottom-nav a{
-
-    font-size:30px;
-
-    text-decoration:none;
-
-    color:var(--primary);
-
-}
-
-
-@media(max-width:600px){
-
-h1{
-font-size:27px;
-}
-
-.teacher-img{
+right:-50px;
+bottom:-50px;
 
 width:120px;
 height:120px;
+
+border-radius:50%;
+
+background:rgba(255,255,255,.28);
+
+}
+
+.card:hover{
+
+transform:translateY(-12px);
+
+box-shadow:
+
+0 30px 70px rgba(0,0,0,.16);
+
+}
+
+.teacher-img{
+
+width:165px;
+height:165px;
+
+border-radius:50%;
+
+object-fit:cover;
+
+border:6px solid #fff;
+
+box-shadow:
+
+0 18px 45px rgba(0,0,0,.18);
+
+transition:.4s;
+
+position:relative;
+
+z-index:2;
+
+}
+
+.card:hover .teacher-img{
+
+transform:scale(1.07);
+
+}
+
+h2{
+
+margin-top:20px;
+
+font-size:23px;
+
+font-weight:700;
+
+color:var(--primary);
+
+position:relative;
+
+z-index:2;
+
+}
+
+.role{
+
+margin-top:8px;
+
+font-size:15px;
+
+font-weight:600;
+
+color:var(--text-light);
+
+position:relative;
+
+z-index:2;
+
+}
+
+.badge{
+
+display:inline-block;
+
+margin-top:18px;
+
+padding:11px 24px;
+
+border-radius:50px;
+
+background:linear-gradient(90deg,#0d5460,#1d7f89);
+
+color:#fff;
+
+font-size:13px;
+
+font-weight:600;
+
+letter-spacing:.4px;
+
+position:relative;
+
+z-index:2;
+
+box-shadow:
+
+0 10px 25px rgba(13,84,96,.25);
+
+}
+
+footer{
+
+margin-top:70px;
+
+text-align:center;
+
+font-size:17px;
+
+font-weight:600;
+
+color:var(--primary);
+
+padding-bottom:40px;
+
+}
+
+.bottom-nav{
+
+position:fixed;
+
+left:50%;
+
+bottom:18px;
+
+transform:translateX(-50%);
+
+width:92%;
+
+max-width:390px;
+
+display:flex;
+
+justify-content:space-around;
+
+align-items:center;
+
+padding:16px;
+
+background:rgba(255,255,255,.92);
+
+backdrop-filter:blur(15px);
+
+border-radius:60px;
+
+box-shadow:
+
+0 20px 60px rgba(0,0,0,.18);
+
+z-index:999;
+
+}
+
+.bottom-nav a{
+
+font-size:30px;
+
+text-decoration:none;
+
+transition:.3s;
+
+}
+
+.bottom-nav a:hover{
+
+transform:translateY(-6px) scale(1.15);
+
+}
+
+@media(max-width:700px){
+
+h1{
+font-size:30px;
+}
+
+.subtitle{
+font-size:15px;
+}
+
+.teacher-img{
+
+width:125px;
+height:125px;
+
+}
+
+.card{
+
+padding:28px 20px;
 
 }
 
@@ -238,42 +434,362 @@ height:120px;
 </head>
 
 <body>
-    <div class="header">
+
+<div class="header">
 
 <div class="logo">
-<img src="2.png" alt="School Logo">
+<img src="2.png" alt="Logo">
 </div>
 
 <h1>👮 Our APF Staff Team</h1>
 
 <p class="subtitle">
-Dedicated professionals serving with discipline, integrity, and commitment.
+Dedicated professionals serving with discipline, integrity and commitment.
 </p>
 
+<div class="teachers">
+    <!-- Staff 1 -->
+<div class="card">
+    <img class="teacher-img" src="1.JPG" alt="Staff 1">
+    <h2>Staff 1</h2>
+    <p class="role">Pushkar Thapa</p>
+    <div class="badge">🇳🇵 Armed Police Force Nepal</div>
 </div>
-<div class="card"><img class="teacher-img" src="1.JPG" alt="Staff 1"><h2>Staff 1</h2><h2>puskar thapa</h2><p class="role">APF Staff</p><div class="badge">🇳🇵 Armed Police Force Nepal</div></div><div class="card"><img class="teacher-img" src="2.JPG" alt="Staff 2"><h2>Staff 2</h2><h2> dinesh khadka</h2><p class="role">APF Staff</p><div class="badge">🇳🇵 Armed Police Force Nepal</div></div><div class="card"><img class="teacher-img" src="3.JPG" alt="Staff 3"><h2>Staff 3</h2><h2>amrit magar</h2><p class="role">APF Staff</p><div class="badge">🇳🇵 Armed Police Force Nepal</div></div><div class="card"><img class="teacher-img" src="6.JPG" alt="Staff 4"><h2>Staff 4</h2><h2></h2><p class="role">APF Staff</p><div class="badge">🇳🇵 Armed Police Force Nepal</div></div><div class="card"><img class="teacher-img" src="11.JPG" alt="Staff 4"><h2>Staff un known</h2><h2>rom bahadur shrestha</h2><p class="role">APF Staff</p><div class="badge">🇳🇵 Armed Police Force Nepal</div></div><div class="card"><img class="teacher-img" src="7.JPG" alt="Staff 5"><h2>Staff 5</h2><h2>krishna </h2><p class="role">APF Staff</p><div class="badge">🇳🇵 Armed Police Force Nepal</div></div><div class="card"><img class="teacher-img" src="8.JPG" alt="Staff 6"><h2>Staff 6</h2><h2>Staff </h2><p class="role">APF Staff</p><div class="badge">🇳🇵 Armed Police Force Nepal</div></div><div class="card"><img class="teacher-img" src="9.JPG" alt="Staff 7"><h2>Staff 7</h2><h2> rai</h2><p class="role">APF Staff</p><div class="badge">🇳🇵 Armed Police Force Nepal</div></div><div class="card"><img class="teacher-img" src="10.JPG" alt="Staff 8"><h2>Staff 8</h2><h2>Spiedy</h2><p class="role">APF Staff</p><div class="badge">🇳🇵 Armed Police Force Nepal</div></div><div class="card"><img class="teacher-img" src="10x12=2.jpg" alt="Staff 9"><h2>Staff 9</h2><h2>ssp lekhnath khanal</h2><p class="role">APF Staff</p><div class="badge">🇳🇵 Armed Police Force Nepal</div></div><div class="card"><img class="teacher-img" src="12.JPG" alt="Staff 10"><h2>Staff 10</h2><h2>electrician</h2><p class="role">APF Staff</p><div class="badge">🇳🇵 Armed Police Force Nepal</div></div><div class="card"><img class="teacher-img" src="13.JPG" alt="Staff 11"><h2>Staff 11</h2><h2> bhattrai</h2><p class="role">APF Staff</p><div class="badge">🇳🇵 Armed Police Force Nepal</div></div><div class="card"><img class="teacher-img" src="14.JPG" alt="Staff 12"><h2>Staff 12</h2><h2> shyam thapa</h2><p class="role">APF Staff</p><div class="badge">🇳🇵 Armed Police Force Nepal</div></div><div class="card"><img class="teacher-img" src="16.JPG" alt="Staff 13"><h2>Staff 13</h2><h2>krishna tamang</h2><p class="role">APF Staff</p><div class="badge">🇳🇵 Armed Police Force Nepal</div></div><div class="card"><img class="teacher-img" src="17.JPG" alt="Staff 14"><h2>Staff 14</h2><h2>taha chian</h2><p class="role">APF Staff</p><div class="badge">🇳🇵 Armed Police Force Nepal</div></div><div class="card"><img class="teacher-img" src="18.JPG" alt="Staff 15"><h2>Staff 15</h2><h2>dipendra lama</h2><p class="role">APF Staff</p><div class="badge">🇳🇵 Armed Police Force Nepal</div></div><div class="card"><img class="teacher-img" src="19.JPG" alt="Staff 16"><h2>Staff 16</h2><h2> man bhadur khadka</h2><p class="role">APF Staff</p><div class="badge">🇳🇵 Armed Police Force Nepal</div></div><div class="card"><img class="teacher-img" src="28.jpeg" alt="Staff 17"><h2>Staff 17</h2><h2>Santosh bhandari</h2><p class="role">APF Staff</p><div class="badge">🇳🇵 Armed Police Force Nepal</div></div><div class="card"><img class="teacher-img" src="30.JPG" alt="Staff 18"><h2>Staff 18</h2><h2>Sister</h2><p class="role">APF Staff</p><div class="badge">🇳🇵 Armed Police Force Nepal</div></div><div class="card"><img class="teacher-img" src="32.JPG" alt="Staff 19"><h2>Staff 19</h2><h2>Sister</h2><p class="role">APF Staff</p><div class="badge">🇳🇵 Armed Police Force Nepal</div></div><div class="card"><img class="teacher-img" src="36.JPG" alt="Staff 20"><h2>Staff 20</h2><h2>Sister</h2><p class="role">APF Staff</p><div class="badge">🇳🇵 Armed Police Force Nepal</div></div><div class="card"><img class="teacher-img" src="37.JPG" alt="Staff 21"><h2>Staff 21</h2><h2>manoj nepal</h2><p class="role">APF Staff</p><div class="badge">🇳🇵 Armed Police Force Nepal</div></div><div class="card"><img class="teacher-img" src="39.JPG" alt="Staff 22"><h2>Staff 22</h2><h2>Sister</h2><p class="role">APF Staff</p><div class="badge">🇳🇵 Armed Police Force Nepal</div></div>    <div class="card"><img class="teacher-img" src="40.JPG" alt="Staff 23"><h2>Staff 23</h2><h2>sister</h2><p class="role">APF Staff</p><div class="badge">🇳🇵 Armed Police Force Nepal</div></div><div class="card"><img class="teacher-img" src="41.JPG" alt="Staff 24"><h2>Staff 24</h2><h2>mohan bikram thapa</h2><p class="role">APF Staff</p><div class="badge">🇳🇵 Armed Police Force Nepal</div></div><div class="card"><img class="teacher-img" src="42.JPG" alt="Staff 25"><h2>Staff 25</h2><h2>chakra </h2><p class="role">APF Staff</p><div class="badge">🇳🇵 Armed Police Force Nepal</div></div><div class="card"><img class="teacher-img" src="43.JPG" alt="Staff 26"><h2>Staff 26</h2><h2>Sister</h2><p class="role">APF Staff</p><div class="badge">🇳🇵 Armed Police Force Nepal</div></div><div class="card"><img class="teacher-img" src="48.JPG" alt="Staff 27"><h2>Staff 27</h2><h2> salikram bhatta</h2></h2><p class="role">APF Staff</p><div class="badge">🇳🇵 Armed Police Force Nepal</div></div><div class="card"><img class="teacher-img" src="49.JPG" alt="Staff 28"><h2>Staff 28</h2><h2>guru</h2><p class="role">APF Staff</p><div class="badge">🇳🇵 Armed Police Force Nepal</div></div><div class="card"><img class="teacher-img" src="50.JPG" alt="Staff 29"><h2>Staff 29</h2><h2>Sister</h2><p class="role">APF Staff</p><div class="badge">🇳🇵 Armed Police Force Nepal</div></div><div class="card"><img class="teacher-img" src="51.JPG" alt="Staff 30"><h2>Staff 30</h2><h2>dhal bahadur </h2><p class="role">APF Staff</p><div class="badge">🇳🇵 Armed Police Force Nepal</div></div><div class="card"><img class="teacher-img" src="52.JPG" alt="Staff 31"><h2>Staff 31</h2><h2>niraj </h2><p class="role">APF Staff</p><div class="badge">🇳🇵 Armed Police Force Nepal</div></div><div class="card"><img class="teacher-img" src="54.JPG" alt="Staff 32"><h2>Staff 32</h2><h2>bharat </h2><p class="role">APF Staff</p><div class="badge">🇳🇵 Armed Police Force Nepal</div></div><div class="card"><img class="teacher-img" src="56.JPG" alt="Staff 33"><h2>Staff 33</h2><h2>Sister</h2><p class="role">APF Staff</p><div class="badge">🇳🇵 Armed Police Force Nepal</div></div><div class="card"><img class="teacher-img" src="58.JPG" alt="Staff 34"><h2>Staff 34</h2><h2>Sister</h2><p class="role">APF Staff</p><div class="badge">🇳🇵 Armed Police Force Nepal</div></div><div class="card"><img class="teacher-img" src="59.JPG" alt="Staff 35"><h2>Staff 35</h2><h2>sister</h2><p class="role">APF Staff</p><div class="badge">🇳🇵 Armed Police Force Nepal</div></div><div class="card"><img class="teacher-img" src="62.JPG" alt="Staff 36"><h2>Staff 36</h2><h2>sister</h2><p class="role">APF Staff</p><div class="badge">🇳🇵 Armed Police Force Nepal</div></div><div class="card"><img class="teacher-img" src="63.JPG" alt="Staff 37"><h2>Staff 37</h2><h2>dipak ram lohar</h2><p class="role">APF Staff</p><div class="badge">🇳🇵 Armed Police Force Nepal</div></div><div class="card"><img class="teacher-img" src="64.JPG" alt="Staff 38"><h2>Staff 38</h2><h2>roshan benjo</h2><p class="role">APF Staff</p><div class="badge">🇳🇵 Armed Police Force Nepal</div></div><div class="card"><img class="teacher-img" src="66.JPG" alt="Staff 39"><h2>Staff 39</h2><h2> bele</h2><p class="role">APF Staff</p><div class="badge">🇳🇵 Armed Police Force Nepal</div></div><div class="card"><img class="teacher-img" src="70.JPG" alt="Staff 40"><h2>Staff 40</h2><h2> sister</h2><p class="role">APF Staff</p><div class="badge">🇳🇵 Armed Police Force Nepal</div></div>
 
-
+<!-- Staff 2 -->
+<div class="card">
+    <img class="teacher-img" src="2.JPG" alt="Staff 2">
+    <h2>Staff 2</h2>
+    <p class="role">Dinesh Khadka</p>
+    <div class="badge">🇳🇵 Armed Police Force Nepal</div>
 </div>
-    <footer>
-🇳🇵 Discipline • Duty • Integrity • Service 🇳🇵
+
+<!-- Staff 3 -->
+<div class="card">
+    <img class="teacher-img" src="3.JPG" alt="Staff 3">
+    <h2>Staff 3</h2>
+    <p class="role">Amrit Magar</p>
+    <div class="badge">🇳🇵 Armed Police Force Nepal</div>
+</div>
+
+<!-- Staff 4 -->
+<div class="card">
+    <img class="teacher-img" src="6.JPG" alt="Staff 4">
+    <h2>Staff 4</h2>
+    <p class="role">APF Staff</p>
+    <div class="badge">🇳🇵 Armed Police Force Nepal</div>
+</div>
+
+<!-- Staff 5 -->
+<div class="card">
+    <img class="teacher-img" src="11.JPG" alt="Staff 5">
+    <h2>Staff 5</h2>
+    <p class="role">Rom Bahadur Shrestha</p>
+    <div class="badge">🇳🇵 Armed Police Force Nepal</div>
+</div>
+
+<!-- Staff 6 -->
+<div class="card">
+    <img class="teacher-img" src="7.JPG" alt="Staff 6">
+    <h2>Staff 6</h2>
+    <p class="role">Krishna</p>
+    <div class="badge">🇳🇵 Armed Police Force Nepal</div>
+</div>
+
+<!-- Staff 7 -->
+<div class="card">
+    <img class="teacher-img" src="8.JPG" alt="Staff 7">
+    <h2>Staff 7</h2>
+    <p class="role">APF Staff</p>
+    <div class="badge">🇳🇵 Armed Police Force Nepal</div>
+</div>
+
+<!-- Staff 8 -->
+<div class="card">
+    <img class="teacher-img" src="9.JPG" alt="Staff 8">
+    <h2>Staff 8</h2>
+    <p class="role">Rai</p>
+    <div class="badge">🇳🇵 Armed Police Force Nepal</div>
+</div>
+
+<!-- Staff 9 -->
+<div class="card">
+    <img class="teacher-img" src="10.JPG" alt="Staff 9">
+    <h2>Staff 9</h2>
+    <p class="role">Spiedy</p>
+    <div class="badge">🇳🇵 Armed Police Force Nepal</div>
+</div>
+
+<!-- Staff 10 -->
+<div class="card">
+    <img class="teacher-img" src="10x12=2.jpg" alt="Staff 10">
+    <h2>SSP Lekhnath Khanal</h2>
+    <p class="role">Superintendent of Police (SP)</p>
+    <div class="badge">🇳🇵 Armed Police Force Nepal</div>
+</div>
+<!-- Staff 11 -->
+<div class="card">
+    <img class="teacher-img" src="12.JPG" alt="Staff 11">
+    <h2>Staff 11</h2>
+    <p class="role">Electrician</p>
+    <div class="badge">🇳🇵 Armed Police Force Nepal</div>
+</div>
+
+<!-- Staff 12 -->
+<div class="card">
+    <img class="teacher-img" src="13.JPG" alt="Staff 12">
+    <h2>Staff 12</h2>
+    <p class="role">Bhattrai</p>
+    <div class="badge">🇳🇵 Armed Police Force Nepal</div>
+</div>
+
+<!-- Staff 13 -->
+<div class="card">
+    <img class="teacher-img" src="14.JPG" alt="Staff 13">
+    <h2>Staff 13</h2>
+    <p class="role">Shyam Thapa</p>
+    <div class="badge">🇳🇵 Armed Police Force Nepal</div>
+</div>
+
+<!-- Staff 14 -->
+<div class="card">
+    <img class="teacher-img" src="16.JPG" alt="Staff 14">
+    <h2>Staff 14</h2>
+    <p class="role">Krishna Tamang</p>
+    <div class="badge">🇳🇵 Armed Police Force Nepal</div>
+</div>
+
+<!-- Staff 15 -->
+<div class="card">
+    <img class="teacher-img" src="17.JPG" alt="Staff 15">
+    <h2>Staff 15</h2>
+    <p class="role">Taha Chian</p>
+    <div class="badge">🇳🇵 Armed Police Force Nepal</div>
+</div>
+
+<!-- Staff 16 -->
+<div class="card">
+    <img class="teacher-img" src="18.JPG" alt="Staff 16">
+    <h2>Staff 16</h2>
+    <p class="role">Dipendra Lama</p>
+    <div class="badge">🇳🇵 Armed Police Force Nepal</div>
+</div>
+
+<!-- Staff 17 -->
+<div class="card">
+    <img class="teacher-img" src="19.JPG" alt="Staff 17">
+    <h2>Staff 17</h2>
+    <p class="role">Man Bahadur Khadka</p>
+    <div class="badge">🇳🇵 Armed Police Force Nepal</div>
+</div>
+
+<!-- Staff 18 -->
+<div class="card">
+    <img class="teacher-img" src="28.jpeg" alt="Staff 18">
+    <h2>Staff 18</h2>
+    <p class="role">Santosh Bhandari</p>
+    <div class="badge">🇳🇵 Armed Police Force Nepal</div>
+</div>
+
+<!-- Staff 19 -->
+<div class="card">
+    <img class="teacher-img" src="30.JPG" alt="Staff 19">
+    <h2>Staff 19</h2>
+    <p class="role">Sister</p>
+    <div class="badge">🇳🇵 Armed Police Force Nepal</div>
+</div>
+
+<!-- Staff 20 -->
+<div class="card">
+    <img class="teacher-img" src="32.JPG" alt="Staff 20">
+    <h2>Staff 20</h2>
+    <p class="role">Sister</p>
+    <div class="badge">🇳🇵 Armed Police Force Nepal</div>
+</div>
+<!-- Staff 21 -->
+<div class="card">
+    <img class="teacher-img" src="36.JPG" alt="Staff 21">
+    <h2>Staff 21</h2>
+    <p class="role">Sister</p>
+    <div class="badge">🇳🇵 Armed Police Force Nepal</div>
+</div>
+
+<!-- Staff 22 -->
+<div class="card">
+    <img class="teacher-img" src="37.JPG" alt="Staff 22">
+    <h2>Staff 22</h2>
+    <p class="role">Manoj Nepal</p>
+    <div class="badge">🇳🇵 Armed Police Force Nepal</div>
+</div>
+
+<!-- Staff 23 -->
+<div class="card">
+    <img class="teacher-img" src="39.JPG" alt="Staff 23">
+    <h2>Staff 23</h2>
+    <p class="role">Sister</p>
+    <div class="badge">🇳🇵 Armed Police Force Nepal</div>
+</div>
+
+<!-- Staff 24 -->
+<div class="card">
+    <img class="teacher-img" src="40.JPG" alt="Staff 24">
+    <h2>Staff 24</h2>
+    <p class="role">Sister</p>
+    <div class="badge">🇳🇵 Armed Police Force Nepal</div>
+</div>
+
+<!-- Staff 25 -->
+<div class="card">
+    <img class="teacher-img" src="41.JPG" alt="Staff 25">
+    <h2>Staff 25</h2>
+    <p class="role">Mohan Bikram Thapa</p>
+    <div class="badge">🇳🇵 Armed Police Force Nepal</div>
+</div>
+
+<!-- Staff 26 -->
+<div class="card">
+    <img class="teacher-img" src="42.JPG" alt="Staff 26">
+    <h2>Staff 26</h2>
+    <p class="role">Chakra</p>
+    <div class="badge">🇳🇵 Armed Police Force Nepal</div>
+</div>
+
+<!-- Staff 27 -->
+<div class="card">
+    <img class="teacher-img" src="43.JPG" alt="Staff 27">
+    <h2>Staff 27</h2>
+    <p class="role">Sister</p>
+    <div class="badge">🇳🇵 Armed Police Force Nepal</div>
+</div>
+
+<!-- Staff 28 -->
+<div class="card">
+    <img class="teacher-img" src="48.JPG" alt="Staff 28">
+    <h2>Staff 28</h2>
+    <p class="role">Salikram Bhatta</p>
+    <div class="badge">🇳🇵 Armed Police Force Nepal</div>
+</div>
+
+<!-- Staff 29 -->
+<div class="card">
+    <img class="teacher-img" src="49.JPG" alt="Staff 29">
+    <h2>Staff 29</h2>
+    <p class="role">Guru</p>
+    <div class="badge">🇳🇵 Armed Police Force Nepal</div>
+</div>
+
+<!-- Staff 30 -->
+<div class="card">
+    <img class="teacher-img" src="50.JPG" alt="Staff 30">
+    <h2>Staff 30</h2>
+    <p class="role">Sister</p>
+    <div class="badge">🇳🇵 Armed Police Force Nepal</div>
+</div>
+<!-- Staff 31 -->
+<div class="card">
+    <img class="teacher-img" src="51.JPG" alt="Staff 31">
+    <h2>Staff 31</h2>
+    <p class="role">Dhal Bahadur</p>
+    <div class="badge">🇳🇵 Armed Police Force Nepal</div>
+</div>
+
+<!-- Staff 32 -->
+<div class="card">
+    <img class="teacher-img" src="52.JPG" alt="Staff 32">
+    <h2>Staff 32</h2>
+    <p class="role">Niraj</p>
+    <div class="badge">🇳🇵 Armed Police Force Nepal</div>
+</div>
+
+<!-- Staff 33 -->
+<div class="card">
+    <img class="teacher-img" src="54.JPG" alt="Staff 33">
+    <h2>Staff 33</h2>
+    <p class="role">Bharat</p>
+    <div class="badge">🇳🇵 Armed Police Force Nepal</div>
+</div>
+
+<!-- Staff 34 -->
+<div class="card">
+    <img class="teacher-img" src="56.JPG" alt="Staff 34">
+    <h2>Staff 34</h2>
+    <p class="role">Sister</p>
+    <div class="badge">🇳🇵 Armed Police Force Nepal</div>
+</div>
+
+<!-- Staff 35 -->
+<div class="card">
+    <img class="teacher-img" src="58.JPG" alt="Staff 35">
+    <h2>Staff 35</h2>
+    <p class="role">Sister</p>
+    <div class="badge">🇳🇵 Armed Police Force Nepal</div>
+</div>
+
+<!-- Staff 36 -->
+<div class="card">
+    <img class="teacher-img" src="59.JPG" alt="Staff 36">
+    <h2>Staff 36</h2>
+    <p class="role">Sister</p>
+    <div class="badge">🇳🇵 Armed Police Force Nepal</div>
+</div>
+
+<!-- Staff 37 -->
+<div class="card">
+    <img class="teacher-img" src="62.JPG" alt="Staff 37">
+    <h2>Staff 37</h2>
+    <p class="role">Sister</p>
+    <div class="badge">🇳🇵 Armed Police Force Nepal</div>
+</div>
+
+<!-- Staff 38 -->
+<div class="card">
+    <img class="teacher-img" src="63.JPG" alt="Staff 38">
+    <h2>Staff 38</h2>
+    <p class="role">Dipak Ram Lohar</p>
+    <div class="badge">🇳🇵 Armed Police Force Nepal</div>
+</div>
+
+<!-- Staff 39 -->
+<div class="card">
+    <img class="teacher-img" src="64.JPG" alt="Staff 39">
+    <h2>Staff 39</h2>
+    <p class="role">Roshan Benjo</p>
+    <div class="badge">🇳🇵 Armed Police Force Nepal</div>
+</div>
+
+<!-- Staff 40 -->
+<div class="card">
+    <img class="teacher-img" src="66.JPG" alt="Staff 40">
+    <h2>Staff 40</h2>
+    <p class="role">Bele</p>
+    <div class="badge">🇳🇵 Armed Police Force Nepal</div>
+</div>
+
+<!-- Staff 41 -->
+<div class="card">
+    <img class="teacher-img" src="70.JPG" alt="Staff 41">
+    <h2>Staff 41</h2>
+    <p class="role">Sister</p>
+    <div class="badge">🇳🇵 Armed Police Force Nepal</div>
+</div>
+</div>
+<!-- End .teachers -->
+
+<footer>
+    🇳🇵 Discipline • Duty • Integrity • Service 🇳🇵
 </footer>
-
-    
 
 <div class="bottom-nav">
 
-<a href="index.html" title="Home">🏠</a>
+    <a href="index.html" title="Home">🏠</a>
 
-<a href="program_no_gallery.html" title="Programs">🎉</a>
+    <a href="program_no_gallery.html" title="Programs">🎉</a>
 
-<a href="memories.html" title="Memories">💌</a>
+    <a href="memories.html" title="Memories">💌</a>
 
-<a href="staff.html" title="APF Staff">👮</a>
+    <a href="staff.html" title="APF Staff">👮</a>
 
 </div>
 
-
 </body>
-
 </html>
