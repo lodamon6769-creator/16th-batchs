@@ -4,83 +4,173 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
 <title>Teachers' Day Invitation 2026</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+rel="stylesheet">
 
 <style>
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
-    scroll-behavior:smooth;
+
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+
 }
 
 :root{
-    --primary:#0d5460;
-    --secondary:#e0a800;
-    --text:#17434b;
-    --text-light:#35565b;
+
+--navy:#071B38;
+--navy2:#0D2D5F;
+
+--gold:#FFD54F;
+--gold2:#FFC107;
+--gold3:#FFE082;
+
+--white:#ffffff;
+--text:#EAF3FF;
+--text2:#D7E6F5;
+
+--glass:
+rgba(255,255,255,.08);
+
+--shadow:
+0 25px 60px rgba(0,0,0,.35);
+
 }
 
 body{
 
-    min-height:100vh;
-    padding:20px 15px 120px;
-    overflow-x:hidden;
-    color:var(--text);
+min-height:100vh;
 
-    background:linear-gradient(
-    -45deg,
-    #0d5460,
-    #1f8b8f,
-    #ffd54f,
-    #ffffff);
+overflow-x:hidden;
 
-    background-size:400% 400%;
-    animation:bg 15s ease infinite;
+padding:25px 15px 140px;
+
+background:
+
+linear-gradient(
+135deg,
+#03101F,
+#0A2247,
+#163E73,
+#061321);
+
+background-size:400% 400%;
+
+animation:bgMove 15s ease infinite;
+
+color:var(--text);
 
 }
 
-@keyframes bg{
+@keyframes bgMove{
 
-0%{background-position:0% 50%;}
-50%{background-position:100% 50%;}
-100%{background-position:0% 50%;}
+0%{
+background-position:0% 50%;
+}
+
+50%{
+background-position:100% 50%;
+}
+
+100%{
+background-position:0% 50%;
+}
 
 }
 
 body::before{
 
 content:"";
+
 position:fixed;
+
 inset:0;
 
 background:
 
-radial-gradient(circle at top left,
-rgba(255,255,255,.25),
+radial-gradient(
+circle at top left,
+rgba(255,215,0,.12),
 transparent 45%),
 
-radial-gradient(circle at bottom right,
-rgba(255,255,255,.18),
+radial-gradient(
+circle at bottom right,
+rgba(255,255,255,.08),
 transparent 45%);
 
 pointer-events:none;
+
+z-index:-2;
+
+}
+
+/* Floating Stars */
+
+.star{
+
+position:fixed;
+
+width:4px;
+height:4px;
+
+border-radius:50%;
+
+background:var(--gold);
+
+box-shadow:
+
+0 0 10px var(--gold);
+
+animation:twinkle 4s infinite;
+
+opacity:.6;
+
 z-index:-1;
 
 }
 
-/* Header */
+@keyframes twinkle{
+
+0%,100%{
+
+opacity:.2;
+transform:scale(.8);
+
+}
+
+50%{
+
+opacity:1;
+transform:scale(1.6);
+
+}
+
+}
+
+/* HEADER */
 
 .header{
 
 text-align:center;
-margin:30px 0 45px;
+
+margin:35px auto 50px;
+
 animation:fadeDown .8s ease;
 
 }
@@ -88,13 +178,19 @@ animation:fadeDown .8s ease;
 @keyframes fadeDown{
 
 from{
+
 opacity:0;
-transform:translateY(-30px);
+
+transform:translateY(-35px);
+
 }
 
 to{
+
 opacity:1;
+
 transform:translateY(0);
+
 }
 
 }
@@ -102,6 +198,7 @@ transform:translateY(0);
 .logo{
 
 display:flex;
+
 justify-content:center;
 
 }
@@ -110,67 +207,109 @@ justify-content:center;
 
 width:160px;
 height:160px;
-padding:12px;
-border-radius:50%;
-background:white;
-border:5px solid white;
+
 object-fit:contain;
 
-box-shadow:
-0 20px 60px rgba(0,0,0,.2),
-0 0 40px rgba(255,255,255,.4);
+padding:14px;
 
-transition:.4s;
+border-radius:50%;
+
+background:white;
+
+border:5px solid var(--gold);
+
+box-shadow:
+
+0 25px 60px rgba(0,0,0,.35),
+
+0 0 40px rgba(255,215,0,.35);
+
+transition:.45s;
+
+animation:logoFloat 4s ease-in-out infinite;
 
 }
 
 .logo img:hover{
 
-transform:scale(1.08) rotate(8deg);
+transform:
+
+rotate(8deg)
+scale(1.08);
+
+}
+
+@keyframes logoFloat{
+
+0%,100%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-12px);
+
+}
 
 }
 
 h1{
 
-margin-top:20px;
-font-size:42px;
-font-weight:800;
-color:var(--primary);
-text-shadow:0 5px 15px rgba(0,0,0,.15);
+margin-top:22px;
+
+font-family:'Playfair Display',serif;
+
+font-size:48px;
+
+font-weight:700;
+
+color:var(--gold);
+
+text-shadow:
+
+0 0 18px rgba(255,215,0,.35);
 
 }
 
 .subtitle{
 
-margin-top:10px;
-font-size:17px;
-font-weight:500;
-color:var(--text-light);
+margin-top:15px;
+
+font-size:18px;
+
+line-height:1.8;
+
+color:var(--text2);
+
+max-width:700px;
+
+margin-inline:auto;
 
 }
 
-/* Invitation Card */
+/* GLASS CARD */
 
-.invitation{
+.glass{
 
-width:95%;
-max-width:900px;
+width:min(920px,96%);
+
 margin:auto;
-
-background:rgba(255,255,255,.88);
-
-backdrop-filter:blur(20px);
-
-border-radius:30px;
 
 padding:45px;
 
-box-shadow:
-0 25px 60px rgba(0,0,0,.15);
+border-radius:35px;
 
-border:1px solid rgba(255,255,255,.8);
+background:var(--glass);
 
-animation:fadeUp .8s ease;
+backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,.15);
+
+box-shadow:var(--shadow);
+
+animation:fadeUp .9s ease;
 
 }
 
@@ -179,115 +318,24 @@ animation:fadeUp .8s ease;
 from{
 
 opacity:0;
-transform:translateY(30px);
+
+transform:translateY(35px);
 
 }
 
 to{
 
 opacity:1;
+
 transform:translateY(0);
 
 }
 
 }
 
-.invitation h2{
+/* Responsive */
 
-text-align:center;
-font-size:30px;
-color:var(--primary);
-margin-bottom:30px;
-
-}
-
-.invitation p{
-
-font-size:18px;
-line-height:2;
-color:var(--text-light);
-margin-bottom:18px;
-
-}
-
-.details{
-
-margin:30px 0;
-padding:25px;
-border-radius:20px;
-
-background:rgba(255,248,181,.45);
-
-border-left:6px solid var(--secondary);
-
-}
-
-.details p{
-
-margin:8px 0;
-font-size:17px;
-
-}
-
-/* Footer */
-
-footer{
-
-text-align:center;
-margin:50px 0 20px;
-font-size:18px;
-font-weight:700;
-color:var(--primary);
-
-}
-
-/* Navigation */
-
-.bottom-nav{
-
-position:fixed;
-
-left:50%;
-bottom:20px;
-
-transform:translateX(-50%);
-
-width:92%;
-max-width:340px;
-
-display:flex;
-justify-content:space-around;
-
-padding:15px;
-
-background:rgba(255,255,255,.9);
-
-backdrop-filter:blur(20px);
-
-border-radius:50px;
-
-box-shadow:0 15px 40px rgba(0,0,0,.18);
-
-}
-
-.bottom-nav a{
-
-font-size:28px;
-text-decoration:none;
-color:var(--primary);
-
-transition:.3s;
-
-}
-
-.bottom-nav a:hover{
-
-transform:translateY(-8px);
-color:var(--secondary);
-
-}
-
-@media(max-width:600px){
+@media(max-width:768px){
 
 .logo img{
 
@@ -298,17 +346,197 @@ height:130px;
 
 h1{
 
-font-size:30px;
+font-size:34px;
 
 }
 
-.invitation{
+.subtitle{
 
-padding:25px;
+font-size:16px;
+
+padding:0 10px;
 
 }
 
-.invitation p{
+.glass{
+
+padding:28px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+body{
+
+padding:15px 10px 130px;
+
+}
+
+.logo img{
+
+width:110px;
+height:110px;
+
+}
+
+h1{
+
+font-size:28px;
+
+}
+
+.subtitle{
+
+font-size:15px;
+
+}
+
+.glass{
+
+padding:22px;
+
+border-radius:24px;
+
+}
+
+}
+/* ==========================================
+   INVITATION CONTENT
+========================================== */
+
+.section-title{
+
+text-align:center;
+
+font-family:'Playfair Display',serif;
+
+font-size:34px;
+
+color:var(--gold);
+
+margin-bottom:15px;
+
+}
+
+.section-subtitle{
+
+text-align:center;
+
+font-size:17px;
+
+color:var(--text2);
+
+margin-bottom:40px;
+
+line-height:1.8;
+
+}
+
+.letter{
+
+font-size:18px;
+
+line-height:2.1;
+
+color:var(--text);
+
+}
+
+.letter p{
+
+margin-bottom:22px;
+
+}
+
+.highlight{
+
+color:var(--gold);
+
+font-weight:700;
+
+}
+
+.details{
+
+margin:35px 0;
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+gap:20px;
+
+}
+
+.detail-card{
+
+background:rgba(255,255,255,.08);
+
+border:1px solid rgba(255,255,255,.12);
+
+border-radius:22px;
+
+padding:24px;
+
+text-align:center;
+
+transition:.4s;
+
+backdrop-filter:blur(12px);
+
+}
+
+.detail-card:hover{
+
+transform:translateY(-10px);
+
+border-color:var(--gold);
+
+box-shadow:
+
+0 18px 40px rgba(255,215,0,.20);
+
+}
+
+.detail-card .icon{
+
+font-size:42px;
+
+margin-bottom:15px;
+
+}
+
+.detail-card h3{
+
+font-size:18px;
+
+color:var(--gold);
+
+margin-bottom:8px;
+
+}
+
+.detail-card p{
+
+font-size:15px;
+
+color:var(--text2);
+
+line-height:1.8;
+
+}
+
+@media(max-width:768px){
+
+.section-title{
+
+font-size:28px;
+
+}
+
+.letter{
 
 font-size:16px;
 
@@ -322,156 +550,686 @@ font-size:16px;
 
 <body>
 
-<div class="header">
+<!-- Floating Stars -->
+
+<div class="star" style="left:8%;top:12%;animation-delay:0s;"></div>
+<div class="star" style="left:22%;top:28%;animation-delay:1s;"></div>
+<div class="star" style="left:38%;top:8%;animation-delay:2s;"></div>
+<div class="star" style="left:56%;top:22%;animation-delay:3s;"></div>
+<div class="star" style="left:72%;top:14%;animation-delay:1.5s;"></div>
+<div class="star" style="left:90%;top:30%;animation-delay:2.5s;"></div>
+
+<!-- HEADER -->
+
+<header class="header">
 
 <div class="logo">
-<img src="2.png" alt="School Logo">
+
+<img src="2.png"
+alt="School Logo">
+
 </div>
 
-<h1>💌 Teachers' Day Invitation</h1>
+<h1>
+💌 Teachers' Day Invitation
+</h1>
 
 <p class="subtitle">
-You Are Cordially Invited To Celebrate Teachers' Day 2026
+
+With respect and gratitude, we warmly invite all respected teachers, APF staff, and distinguished guests to celebrate Teachers' Day 2026 with us.
+
 </p>
 
-</div>
+</header>
 
-<div class="invitation">
+<!-- INVITATION -->
 
-<h2>Invitation Letter</h2>
+<section class="glass">
 
-<p><strong>Dear Respected Principal, Teachers, and APF Staff,</strong></p>
+<h2 class="section-title">
+
+You're Invited
+
+</h2>
+
+<p class="section-subtitle">
+
+A day dedicated to celebrating the guidance, dedication, and inspiration of our respected teachers.
+
+</p>
+
+<div class="letter">
 
 <p>
 
-With immense respect and heartfelt gratitude, we are delighted to invite you to join us in celebrating <strong>Teachers' Day 2026</strong>. This special occasion is dedicated to honoring your unwavering dedication, guidance, and invaluable contribution to shaping our future.
-
-</p>
-<p>
-
-Your wisdom, patience, and continuous encouragement have inspired generations of students to pursue knowledge, develop strong character, and strive for excellence. We sincerely appreciate your commitment and the positive impact you have made on our lives.
+<strong>Dear Respected Principal, Teachers, and APF Staff,</strong>
 
 </p>
 
 <p>
 
-It would be our greatest honor to celebrate this memorable occasion in your gracious presence. Your attendance will make this event more meaningful and will inspire every student participating in the celebration.
+It is with immense joy and heartfelt gratitude that we invite you to our <span class="highlight">Teachers' Day Celebration 2026</span>. This special occasion is dedicated to honoring your unwavering commitment to education and the positive impact you have made on every student's life.
 
 </p>
+
+<p>
+
+Your guidance, patience, and encouragement have inspired us to dream bigger, work harder, and become better individuals. We are truly thankful for your dedication and countless sacrifices.
+
+</p>
+<p>
+
+We would be deeply honored by your gracious presence. Your participation will make this celebration more meaningful and create unforgettable memories for every student.
+
+</p>
+
+<!-- ==========================================
+     EVENT DETAILS
+========================================== -->
 
 <div class="details">
 
-<p><strong>📅 Date:</strong> 2083/04/20 (Please Update)</p>
+<div class="detail-card">
 
-<p><strong>🕘 Time:</strong> 8:00 AM Onwards</p>
+<div class="icon">
+📅
+</div>
 
-<p><strong>📍 Venue:</strong> APF School Hall</p>
+<h3>Date</h3>
 
-<p><strong>🎉 Occasion:</strong> Teachers' Day Celebration 2026</p>
+<p>
+
+2083/04/20<br>
+(Update if needed)
+
+</p>
 
 </div>
 
-<p>
+<div class="detail-card">
 
-The program includes welcome speeches, cultural performances, musical presentations, appreciation ceremonies, memorable moments, and special activities prepared with love and respect for all our teachers.
+<div class="icon">
+🕘
+</div>
 
-</p>
-
-<p>
-
-We sincerely hope you will honor us with your valuable presence and make this celebration an unforgettable occasion for everyone.
-
-</p>
+<h3>Time</h3>
 
 <p>
 
-Your participation will not only encourage us but also make this day truly special and memorable.
+08:00 AM<br>
+Onwards
 
 </p>
-<p>
-
-Your wisdom, patience, and continuous encouragement have inspired generations of students to pursue knowledge, develop strong character, and strive for excellence. We sincerely appreciate your commitment and the positive impact you have made on our lives.
-
-</p>
-
-<p>
-
-It would be our greatest honor to celebrate this memorable occasion in your gracious presence. Your attendance will make this event more meaningful and will inspire every student participating in the celebration.
-
-</p>
-
-<div class="details">
-
-<p><strong>📅 Date:</strong> 2083/04/20 (Please Update)</p>
-
-<p><strong>🕘 Time:</strong> 8:00 AM Onwards</p>
-
-<p><strong>📍 Venue:</strong> APF School Hall</p>
-
-<p><strong>🎉 Occasion:</strong> Teachers' Day Celebration 2026</p>
 
 </div>
 
-<p>
+<div class="detail-card">
 
-The program includes welcome speeches, cultural performances, musical presentations, appreciation ceremonies, memorable moments, and special activities prepared with love and respect for all our teachers.
-
-</p>
-
-<p>
-
-We sincerely hope you will honor us with your valuable presence and make this celebration an unforgettable occasion for everyone.
-
-</p>
-
-<p>
-
-Your participation will not only encourage us but also make this day truly special and memorable.
-
-</p>
+<div class="icon">
+📍
 </div>
-    <div class="bottom-nav">
 
-<a href="index.html">
-🏠
-</a>
+<h3>Venue</h3>
 
-<a href="program_no_gallery.html">
+<p>
+
+APF School Hall
+
+</p>
+
+</div>
+
+<div class="detail-card">
+
+<div class="icon">
 🎉
-</a>
-
-<a href="memories.html">
-💌
-</a>
-
-<a href="staff.html">
-👮
-</a>
 </div>
+
+<h3>Occasion</h3>
+
+<p>
+
+Teachers' Day<br>
+Celebration 2026
+
+</p>
+
+</div>
+
+</div>
+
+<!-- ==========================================
+     MESSAGE
+========================================== -->
+
+<p>
+
+The celebration has been carefully prepared with great enthusiasm and respect. The program will feature inspiring speeches, cultural performances, musical presentations, appreciation ceremonies, and memorable moments dedicated to all our respected teachers.
+
+</p>
+
+<p>
+
+Every activity has been thoughtfully planned to express our heartfelt gratitude for your continuous guidance, encouragement, and dedication to shaping our future.
+
+</p>
+
+<p>
+
+Your presence will be the greatest source of encouragement for every student participating in this celebration. Together, let us make this Teachers' Day a truly memorable and joyful occasion.
+
+</p>
+
+<!-- ==========================================
+     APPRECIATION
+========================================== -->
+
+<div style="margin-top:45px;">
+
+<div style="
+
+padding:30px;
+
+border-radius:25px;
+
+background:linear-gradient(
+135deg,
+rgba(255,213,79,.15),
+rgba(255,255,255,.06));
+
+border:1px solid rgba(255,213,79,.30);
+
+text-align:center;
+
+">
+
+<div style="font-size:65px;">
+
+🌹
+
+</div>
+
+<h2 style="
+
+margin-top:15px;
+
+font-family:'Playfair Display',serif;
+
+color:var(--gold);
+
+">
+
+Thank You, Teachers
+
+</h2>
+
+<p style="
+
+margin-top:18px;
+
+font-size:18px;
+
+line-height:2;
+
+color:var(--text2);
+
+">
+
+"A teacher plants the seeds of knowledge,
+nurtures them with patience,
+and inspires every student
+to bloom into a better future."
+
+</p>
+
+</div>
+
+</div>
+<!-- ==========================================
+     PREMIUM QUOTE SECTION
+========================================== -->
+
+<div style="margin-top:60px;">
+
+<div style="
+padding:45px 35px;
+border-radius:30px;
+background:linear-gradient(
+135deg,
+rgba(255,213,79,.18),
+rgba(255,255,255,.05));
+border:1px solid rgba(255,213,79,.30);
+text-align:center;
+position:relative;
+overflow:hidden;
+">
+
+<div style="
+font-size:80px;
+color:rgba(255,213,79,.25);
+position:absolute;
+top:10px;
+left:25px;
+">
+
+❝
+
+</div>
+
+<h2 style="
+font-family:'Playfair Display',serif;
+font-size:36px;
+color:var(--gold);
+margin-bottom:20px;
+">
+
+A Tribute to Every Teacher
+
+</h2>
+
+<p style="
+font-size:19px;
+line-height:2;
+color:var(--text2);
+max-width:720px;
+margin:auto;
+">
+
+"The influence of a great teacher can never be erased.
+Your knowledge lights our path,
+your patience strengthens our confidence,
+and your kindness shapes our future."
+
+</p>
+
+<div style="
+margin-top:25px;
+font-size:18px;
+font-weight:700;
+color:var(--gold);
+letter-spacing:2px;
+">
+
+Happy Teachers' Day ❤️
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ==========================================
+     APPRECIATION CARDS
+========================================== -->
+
+<div style="
+margin-top:60px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:25px;
+">
+
+<div class="detail-card">
+
+<div class="icon">📚</div>
+
+<h3>Knowledge</h3>
+
+<p>
+
+Thank you for sharing wisdom and inspiring us every day.
+
+</p>
+
+</div>
+
+<div class="detail-card">
+
+<div class="icon">❤️</div>
+
+<h3>Dedication</h3>
+
+<p>
+
+Your patience and commitment have shaped countless futures.
+
+</p>
+
+</div>
+
+<div class="detail-card">
+
+<div class="icon">🌟</div>
+
+<h3>Inspiration</h3>
+
+<p>
+
+You encourage us to dream bigger and achieve more.
+
+</p>
+
+</div>
+
+</div>
+
+<!-- ==========================================
+     GOLD DIVIDER
+========================================== -->
+
+<div style="
+margin:60px auto;
+width:140px;
+height:5px;
+border-radius:20px;
+background:linear-gradient(
+90deg,
+transparent,
+var(--gold),
+transparent);
+box-shadow:0 0 20px rgba(255,213,79,.6);
+"></div>
+
+<!-- ==========================================
+     FINAL THANK YOU
+========================================== -->
+
+<div style="
+text-align:center;
+padding:20px;
+">
+
+<h2 style="
+font-family:'Playfair Display',serif;
+font-size:34px;
+color:var(--gold);
+margin-bottom:20px;
+">
+
+💐 Thank You 💐
+
+</h2>
+
+<p style="
+font-size:18px;
+line-height:2;
+color:var(--text2);
+max-width:760px;
+margin:auto;
+">
+
+Thank you for believing in us,
+guiding us,
+encouraging us,
+and helping us become better people.
+
+Your dedication, kindness, and wisdom will always remain in our hearts.
+
+We look forward to celebrating this wonderful day with you.
+
+</p>
+
+</div>
+
+</div>
+<!-- End .glass -->
+    <!-- ==========================================
+     FOOTER
+========================================== -->
+
+<footer style="
+margin-top:70px;
+text-align:center;
+padding:35px 20px;
+">
+
+<h2 style="
+font-family:'Playfair Display',serif;
+font-size:34px;
+color:var(--gold);
+margin-bottom:15px;
+">
+
+✨ Teachers' Day 2026 ✨
+
+</h2>
+
+<p style="
+max-width:700px;
+margin:auto;
+line-height:2;
+font-size:16px;
+color:var(--text2);
+">
+
+With deepest respect and heartfelt gratitude, we thank every teacher for
+your dedication, guidance, patience, and inspiration.
+
+May this celebration remind you how much you are valued and appreciated.
+
+</p>
+
+<p style="
+margin-top:25px;
+font-size:18px;
+font-weight:700;
+color:var(--gold);
+">
+
+Made with ❤️ by the Students of 16th Batch
+
+</p>
+
+</footer>
+
+<!-- ==========================================
+     FLOATING NAVIGATION
+========================================== -->
+
+<nav class="bottom-nav">
+
+<a href="index.html" title="Home">
+
+🏠
+
+</a>
+
+<a href="program_no_gallery.html" title="Program">
+
+🎉
+
+</a>
+
+<a href="memories.html" title="Memories">
+
+💌
+
+</a>
+
+<a href="staff.html" title="Teachers">
+
+👮
+
+</a>
+
+</nav>
+
+<style>
+
+.bottom-nav{
+
+position:fixed;
+
+left:50%;
+bottom:18px;
+
+transform:translateX(-50%);
+
+width:min(380px,94%);
+
+display:flex;
+justify-content:space-around;
+align-items:center;
+
+padding:15px 18px;
+
+border-radius:60px;
+
+background:rgba(255,255,255,.10);
+
+backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,.15);
+
+box-shadow:
+0 15px 40px rgba(0,0,0,.35);
+
+z-index:999;
+
+}
+
+.bottom-nav a{
+
+width:55px;
+height:55px;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+font-size:28px;
+
+text-decoration:none;
+
+border-radius:18px;
+
+transition:.35s;
+
+color:var(--gold);
+
+}
+
+.bottom-nav a:hover{
+
+background:rgba(255,213,79,.18);
+
+transform:translateY(-8px);
+
+}
+
+.bottom-nav a.active{
+
+background:rgba(255,213,79,.22);
+
+}
+
+@media(max-width:768px){
+
+.bottom-nav{
+
+padding:12px;
+
+}
+
+.bottom-nav a{
+
+width:48px;
+height:48px;
+
+font-size:24px;
+
+}
+
+}
+
+</style>
 
 <script>
 
-// Optional: Smooth page fade-in
-document.addEventListener("DOMContentLoaded", () => {
-    document.body.style.opacity = "0";
+/* Fade In */
 
-    setTimeout(() => {
-        document.body.style.transition = "opacity .8s ease";
-        document.body.style.opacity = "1";
-    }, 100);
+document.body.style.opacity="0";
+
+window.addEventListener("load",()=>{
+
+setTimeout(()=>{
+
+document.body.style.transition="opacity .8s ease";
+
+document.body.style.opacity="1";
+
+},100);
+
 });
 
-// Highlight current navigation link
-const links = document.querySelectorAll(".bottom-nav a");
+/* Active Navigation */
 
-links.forEach(link => {
-    link.addEventListener("click", () => {
-        links.forEach(item => item.classList.remove("active"));
-        link.classList.add("active");
-    });
+const navLinks=document.querySelectorAll(".bottom-nav a");
+
+navLinks.forEach(link=>{
+
+link.addEventListener("click",()=>{
+
+navLinks.forEach(item=>item.classList.remove("active"));
+
+link.classList.add("active");
+
+});
+
+});
+
+/* Smooth Reveal */
+
+const observer=new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.animate([
+
+{
+
+opacity:0,
+
+transform:"translateY(40px)"
+
+},
+
+{
+
+opacity:1,
+
+transform:"translateY(0)"
+
+}
+
+],{
+
+duration:700,
+
+fill:"forwards"
+
+});
+
+}
+
+});
+
+},{
+
+threshold:.15
+
+});
+
+document.querySelectorAll(".glass,.detail-card").forEach(el=>{
+
+observer.observe(el);
+
 });
 
 </script>
 
 </body>
+
 </html>
