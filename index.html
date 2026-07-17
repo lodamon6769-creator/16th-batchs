@@ -4,10 +4,9 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>You're Invited | Teachers' Day 2026</title>
+<title>Teachers' Day 2026 | You're Invited</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,16 +20,9 @@ content="width=device-width, initial-scale=1.0">
 --navy:#071A3D;
 --navy2:#102A56;
 --gold:#FFD700;
---gold2:#F4C430;
---gold3:#D4AF37;
-
---glass:rgba(255,255,255,.10);
---glass2:rgba(255,255,255,.18);
-
+--gold2:#D4AF37;
 --white:#ffffff;
---text:#f8f8f8;
-
---shadow:0 20px 60px rgba(0,0,0,.35);
+--glass:rgba(255,255,255,.08);
 
 }
 
@@ -45,54 +37,32 @@ body{
 
 font-family:Poppins,sans-serif;
 
+color:white;
+
 background:
-linear-gradient(
-135deg,
+linear-gradient(-45deg,
 #020B20,
 #071A3D,
-#0D2450,
 #102A56,
 #081327);
 
-background-size:500% 500%;
+background-size:400% 400%;
 
-animation:bgMove 20s ease infinite;
+animation:bg 18s ease infinite;
 
 overflow-x:hidden;
-
-color:white;
 
 padding-bottom:120px;
 
 }
 
-@keyframes bgMove{
+@keyframes bg{
 
 0%{background-position:0% 50%;}
-
 50%{background-position:100% 50%;}
-
 100%{background-position:0% 50%;}
 
 }
-
-/* Scroll */
-
-::-webkit-scrollbar{
-width:8px;
-}
-
-::-webkit-scrollbar-thumb{
-background:linear-gradient(var(--gold),#fff2a8);
-border-radius:20px;
-}
-
-::selection{
-background:var(--gold);
-color:#000;
-}
-
-/* Floating Lights */
 
 .light{
 
@@ -100,13 +70,13 @@ position:fixed;
 
 border-radius:50%;
 
-filter:blur(80px);
+filter:blur(90px);
 
-opacity:.35;
-
-animation:float 12s infinite ease-in-out;
+opacity:.30;
 
 z-index:-1;
+
+animation:float 10s ease-in-out infinite;
 
 }
 
@@ -127,7 +97,7 @@ left:-80px;
 width:340px;
 height:340px;
 
-background:#2d7fff;
+background:#2979ff;
 
 right:-120px;
 bottom:-120px;
@@ -142,642 +112,19 @@ animation-delay:3s;
 
 transform:
 translateY(-60px)
-translateX(30px);
+translateX(35px);
 
 }
 
 }
-
-/* Hero */
-
-.hero{
-
-padding:70px 20px 40px;
-
-text-align:center;
-
-position:relative;
-
-}
-
-.logo{
-
-width:150px;
-height:150px;
-
-margin:auto;
-
-border-radius:50%;
-
-background:
-
-linear-gradient(
-145deg,
-#fff,
-#fff7cc);
-
-padding:8px;
-
-box-shadow:
-
-0 0 40px rgba(255,215,0,.5),
-
-0 0 80px rgba(255,215,0,.25);
-
-animation:logoFloat 4s ease-in-out infinite;
-
-}
-
-.logo img{
-
-width:100%;
-height:100%;
-
-border-radius:50%;
-
-object-fit:cover;
-
-}
-
-@keyframes logoFloat{
-
-50%{
-
-transform:
-translateY(-10px);
-
-}
-
-}
-
-.hero h1{
-
-margin-top:25px;
-
-font-family:
-'Playfair Display',
-serif;
-
-font-size:54px;
-
-color:var(--gold);
-
-letter-spacing:1px;
-
-text-shadow:
-
-0 5px 20px rgba(255,215,0,.3);
-
-}
-
-.hero p{
-
-margin-top:15px;
-
-font-size:18px;
-
-color:#f5f5f5;
-
-max-width:700px;
-
-margin-inline:auto;
-
-line-height:1.8;
-
-}
-
-/* Glass Cards */
-
-.glass{
-
-margin:25px auto;
-
-width:min(1100px,92%);
-
-padding:35px;
-
-border-radius:30px;
-
-background:var(--glass);
-
-backdrop-filter:blur(20px);
-
-border:1px solid rgba(255,255,255,.18);
-
-box-shadow:var(--shadow);
-
-transition:.45s;
-
-}
-
-.glass:hover{
-
-transform:translateY(-8px);
-
-border-color:rgba(255,215,0,.4);
-
-}
-
-h2{
-
-font-family:
-'Playfair Display',
-serif;
-
-font-size:40px;
-
-color:var(--gold);
-
-margin-bottom:25px;
-
-text-align:center;
-
-}
-
-/* Countdown */
-
-.countdown{
-
-display:grid;
-
-grid-template-columns:
-
-repeat(4,1fr);
-
-gap:20px;
-
-}
-
-.time-box{
-
-background:
-
-rgba(255,255,255,.08);
-
-padding:25px;
-
-border-radius:22px;
-
-text-align:center;
-
-border:1px solid rgba(255,215,0,.25);
-
-transition:.4s;
-
-}
-
-.time-box:hover{
-
-transform:translateY(-8px);
-
-border-color:var(--gold);
-
-}
-
-.time-box span{
-
-display:block;
-
-font-size:48px;
-
-font-weight:800;
-
-color:var(--gold);
-
-}
-
-/* Buttons */
-
-.btn{
-
-display:inline-block;
-
-padding:15px 35px;
-
-background:
-
-linear-gradient(
-135deg,
-var(--gold),
-var(--gold3));
-
-color:#111;
-
-font-weight:700;
-
-border-radius:50px;
-
-text-decoration:none;
-
-margin-top:25px;
-
-transition:.4s;
-
-box-shadow:
-
-0 10px 30px rgba(255,215,0,.35);
-
-}
-
-.btn:hover{
-
-transform:translateY(-5px);
-
-}
-
-/* Event Cards */
-
-.cards{
-
-display:grid;
-
-grid-template-columns:
-
-repeat(2,1fr);
-
-gap:22px;
-
-}
-
-.card{
-
-padding:28px;
-
-border-radius:22px;
-
-background:
-
-rgba(255,255,255,.08);
-
-border:1px solid rgba(255,255,255,.12);
-
-transition:.4s;
-
-}
-
-.card:hover{
-
-transform:translateY(-10px);
-
-border-color:var(--gold);
-
-}
-
-/* Footer */
-
-footer{
-
-padding:40px;
-
-text-align:center;
-
-color:#ddd;
-
-}
-
-/* Bottom Navigation */
-
-.bottom-nav{
-
-position:fixed;
-
-bottom:18px;
-
-left:50%;
-
-transform:translateX(-50%);
-
-width:min(420px,94%);
-
-background:
-
-rgba(255,255,255,.12);
-
-backdrop-filter:blur(25px);
-
-display:flex;
-
-justify-content:space-around;
-
-padding:14px;
-
-border-radius:60px;
-
-border:1px solid rgba(255,255,255,.15);
-
-box-shadow:0 15px 40px rgba(0,0,0,.35);
-
-}
-
-.bottom-nav a{
-
-color:white;
-
-font-size:26px;
-
-text-decoration:none;
-
-transition:.35s;
-
-}
-
-.bottom-nav a:hover{
-
-color:var(--gold);
-
-transform:translateY(-5px);
-
-}
-
-/* Mobile */
-
-@media(max-width:768px){
-
-.hero{
-
-padding:50px 18px 30px;
-
-}
-
-.hero h1{
-
-font-size:36px;
-
-}
-
-.hero p{
-
-font-size:15px;
-
-}
-
-.logo{
-
-width:120px;
-height:120px;
-
-}
-
-.glass{
-
-padding:22px;
-
-}
-
-.countdown{
-
-grid-template-columns:
-repeat(2,1fr);
-
-}
-
-.time-box span{
-
-font-size:36px;
-
-}
-
-.cards{
-
-grid-template-columns:1fr;
-
-}
-
-h2{
-
-font-size:30px;
-
-}
-
-}
-
-</style>
-
-</head>
-<!-- ==========================================
-     PREMIUM BACKGROUND EFFECTS
-========================================== -->
-
-<div class="light l1"></div>
-<div class="light l2"></div>
-
-<div id="stars"></div>
-
-<!-- ==========================================
-     HERO SECTION
-========================================== -->
-
-<section class="hero">
-
-<div class="logo">
-
-<img src="2.png" alt="School Logo">
-
-</div>
-
-<div style="margin-top:25px;">
-
-<span style="
-display:inline-block;
-padding:10px 22px;
-border-radius:50px;
-background:rgba(255,215,0,.15);
-border:1px solid rgba(255,215,0,.35);
-color:#FFD700;
-font-weight:700;
-font-size:14px;
-letter-spacing:2px;
-text-transform:uppercase;
-">
-
-✨ Teachers' Day 2026 ✨
-
-</span>
-
-</div>
-
-<h1>
-
-You're Invited
-
-</h1>
-
-<p>
-
-Join us in celebrating the mentors who inspire,
-guide and shape our future.
-
-Your presence will make this occasion
-more memorable and meaningful.
-
-</p>
-
-<div style="
-display:flex;
-justify-content:center;
-gap:15px;
-flex-wrap:wrap;
-margin-top:35px;
-">
-
-
-
-<h2>
-
-🌟 Welcome
-
-</h2>
-
-<p style="
-font-size:18px;
-line-height:2;
-text-align:center;
-max-width:900px;
-margin:auto;
-color:#eeeeee;
-">
-
-Every teacher leaves a mark on the lives of
-their students.
-
-This celebration is a small expression of our
-gratitude for your dedication, patience,
-guidance and encouragement.
-
-We warmly welcome all respected APF staff to
-join us for a memorable Teachers' Day
-Celebration 2026.
-
-</p>
-
-</div>
-
-<!-- ==========================================
-     QUICK INFO
-========================================== -->
-
-<div class="glass">
-
-<div class="cards">
-
-<div class="card">
-
-<div style="font-size:45px;">
-📅
-</div>
-
-<h3 style="margin-top:15px;color:#FFD700;">
-Date
-</h3>
-
-<p style="margin-top:10px;">
-29 July 2026
-</p>
-
-</div>
-
-<div class="card">
-
-<div style="font-size:45px;">
-🕙
-</div>
-
-<h3 style="margin-top:15px;color:#FFD700;">
-Time
-</h3>
-
-<p style="margin-top:10px;">
-10:00 AM
-</p>
-
-</div>
-
-<div class="card">
-
-<div style="font-size:45px;">
-📍
-</div>
-
-<h3 style="margin-top:15px;color:#FFD700;">
-Venue
-</h3>
-
-<p style="margin-top:10px;">
-School Auditorium
-</p>
-
-</div>
-
-<div class="card">
-
-<div style="font-size:45px;">
-🎉
-</div>
-
-<h3 style="margin-top:15px;color:#FFD700;">
-Occasion
-</h3>
-
-<p style="margin-top:10px;">
-Teachers' Day Celebration
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-<!-- ==========================================
-     SCROLL INDICATOR
-========================================== -->
-
-<div style="
-display:flex;
-justify-content:center;
-margin-top:20px;
-margin-bottom:40px;
-">
-
-<div style="
-width:34px;
-height:58px;
-border:2px solid rgba(255,255,255,.45);
-border-radius:30px;
-display:flex;
-justify-content:center;
-padding-top:10px;
-">
-
-<div id="scrollDot"
-style="
-width:8px;
-height:8px;
-background:#FFD700;
-border-radius:50%;
-animation:scrollDot 1.8s infinite;
-">
-</div>
-
-</div>
-
-</div>
-
-<style>
 
 #stars{
 
 position:fixed;
 
-left:0;
-top:0;
-
-width:100%;
-height:100%;
+inset:0;
 
 pointer-events:none;
-
-z-index:-2;
 
 background-image:
 
@@ -787,13 +134,15 @@ radial-gradient(#FFD700 1px,transparent 1px);
 background-size:120px 120px,
 180px 180px;
 
-animation:starsMove 90s linear infinite;
+opacity:.35;
 
-opacity:.4;
+animation:stars 80s linear infinite;
+
+z-index:-2;
 
 }
 
-@keyframes starsMove{
+@keyframes stars{
 
 from{
 
@@ -809,246 +158,904 @@ transform:translateY(-600px);
 
 }
 
-@keyframes scrollDot{
+.hero{
 
-0%{
+padding:80px 20px 50px;
 
-transform:translateY(0);
-
-opacity:1;
+text-align:center;
 
 }
+
+.logo{
+
+width:170px;
+height:170px;
+
+margin:auto;
+
+padding:8px;
+
+border-radius:50%;
+
+background:
+linear-gradient(145deg,#fff,#fff8cf);
+
+box-shadow:
+
+0 0 40px rgba(255,215,0,.4),
+0 0 90px rgba(255,215,0,.25);
+
+animation:logo 4s ease-in-out infinite;
+
+}
+
+.logo img{
+
+width:100%;
+height:100%;
+
+border-radius:50%;
+
+object-fit:cover;
+
+}
+
+@keyframes logo{
 
 50%{
 
-transform:translateY(18px);
-
-opacity:.4;
+transform:translateY(-10px);
 
 }
 
-100%{
+}
 
-transform:translateY(0);
+.hero h1{
 
-opacity:1;
+font-family:'Playfair Display',serif;
+
+font-size:60px;
+
+margin-top:30px;
+
+color:var(--gold);
+
+text-shadow:
+
+0 5px 25px rgba(255,215,0,.35);
+
+}
+
+.hero p{
+
+max-width:850px;
+
+margin:25px auto;
+
+font-size:18px;
+
+line-height:1.9;
+
+color:#f2f2f2;
+
+}
+
+.glass{
+
+width:min(1100px,92%);
+
+margin:30px auto;
+
+padding:35px;
+
+background:var(--glass);
+
+border:1px solid rgba(255,255,255,.15);
+
+backdrop-filter:blur(18px);
+
+border-radius:28px;
+
+box-shadow:
+
+0 15px 45px rgba(0,0,0,.35);
+
+transition:.4s;
+
+}
+
+.glass:hover{
+
+transform:translateY(-8px);
+
+border-color:rgba(255,215,0,.35);
+
+}
+
+.cards{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:22px;
+
+}
+
+.card{
+
+padding:28px;
+
+border-radius:22px;
+
+background:rgba(255,255,255,.07);
+
+border:1px solid rgba(255,255,255,.12);
+
+transition:.35s;
+
+}
+
+.card:hover{
+
+transform:translateY(-8px);
+
+border-color:#FFD700;
+
+}
+
+.card h3{
+
+margin:12px 0;
+
+color:#FFD700;
+
+}
+
+.countdown{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:18px;
+
+}
+
+.time-box{
+
+padding:25px;
+
+background:rgba(255,255,255,.08);
+
+border-radius:22px;
+
+text-align:center;
+
+}
+
+.time-box span{
+
+display:block;
+
+font-size:48px;
+
+font-weight:800;
+
+color:#FFD700;
+
+}
+
+footer{
+
+padding:50px 20px;
+
+text-align:center;
+
+color:#ddd;
+
+}
+
+.bottom-nav{
+
+position:fixed;
+
+left:50%;
+
+bottom:18px;
+
+transform:translateX(-50%);
+
+width:min(430px,94%);
+
+display:flex;
+
+justify-content:space-around;
+
+padding:15px;
+
+background:rgba(255,255,255,.10);
+
+backdrop-filter:blur(25px);
+
+border-radius:60px;
+
+border:1px solid rgba(255,255,255,.15);
+
+}
+
+.bottom-nav a{
+
+font-size:28px;
+
+text-decoration:none;
+
+color:white;
+
+transition:.35s;
+
+}
+
+.bottom-nav a:hover{
+
+color:#FFD700;
+
+transform:translateY(-5px);
+
+}
+
+.topBtn{
+
+position:fixed;
+
+right:20px;
+
+bottom:110px;
+
+width:58px;
+
+height:58px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+border-radius:50%;
+
+background:linear-gradient(135deg,#FFD700,#D4AF37);
+
+color:#111;
+
+font-size:24px;
+
+text-decoration:none;
+
+box-shadow:0 10px 30px rgba(255,215,0,.35);
+
+}
+
+.cursor{
+
+position:fixed;
+
+width:22px;
+height:22px;
+
+background:#FFD700;
+
+border-radius:50%;
+
+pointer-events:none;
+
+opacity:.4;
+
+transform:translate(-50%,-50%);
+
+z-index:9999;
+
+}
+
+@media(max-width:768px){
+
+.hero h1{
+
+font-size:38px;
+
+}
+
+.logo{
+
+width:130px;
+height:130px;
+
+}
+
+.cards{
+
+grid-template-columns:1fr;
+
+}
+
+.countdown{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.time-box span{
+
+font-size:36px;
 
 }
 
 }
 
 </style>
+
+</head>
+
+<body>
+
+<div class="light l1"></div>
+<div class="light l2"></div>
+
+<div id="stars"></div>
 <!-- ==========================================
-        COUNTDOWN SECTION
+     HERO SECTION
 ========================================== -->
 
-<section id="countdown" class="glass">
+<section class="hero">
 
-<h2>
-⏳ Countdown To Celebration
-</h2>
+    <div class="logo">
+        <img src="2.png" alt="School Logo">
+    </div>
 
-<p style="
-text-align:center;
-margin-bottom:30px;
-color:#ddd;
-font-size:18px;
-">
+    <div style="margin-top:28px;">
 
-Every second brings us closer to celebrating our
-wonderful teachers.
+        <span style="
+        display:inline-block;
+        padding:12px 28px;
+        border-radius:50px;
+        background:rgba(255,215,0,.15);
+        border:1px solid rgba(255,215,0,.35);
+        color:#FFD700;
+        font-weight:700;
+        letter-spacing:2px;
+        text-transform:uppercase;
+        ">
 
-</p>
+            ✨ Teachers' Day 2026 ✨
 
-<div class="countdown">
+        </span>
 
-<div class="time-box">
+    </div>
 
-<span id="days">00</span>
+    <h1>You're Invited</h1>
 
-Days
+    <p>
 
-</div>
+        Join us in celebrating the mentors who inspire,
+        guide and shape our future.
 
-<div class="time-box">
+        <br><br>
 
-<span id="hours">00</span>
+        Your presence will make this occasion
+        more memorable and meaningful.
 
-Hours
-
-</div>
-
-<div class="time-box">
-
-<span id="minutes">00</span>
-
-Minutes
-
-</div>
-
-<div class="time-box">
-
-<span id="seconds">00</span>
-
-Seconds
-
-</div>
-
-</div>
+    </p>
 
 </section>
 
-
 <!-- ==========================================
-        EVENT SCHEDULE
+     WELCOME SECTION
 ========================================== -->
 
 <section class="glass">
 
-<h2>
+    <h2 style="
+    font-family:'Playfair Display',serif;
+    color:#FFD700;
+    font-size:42px;
+    text-align:center;
+    margin-bottom:25px;
+    ">
 
-📅 Event Schedule
+        🌟 Welcome
 
-</h2>
+    </h2>
 
-<div style="display:flex;
-flex-direction:column;
-gap:20px;">
+    <p style="
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    line-height:2;
+    font-size:18px;
+    color:#f2f2f2;
+    ">
 
-<div class="card">
+        Every teacher leaves a lifelong mark on the hearts
+        and minds of students.
 
-<h3 style="color:#FFD700;">
+        <br><br>
 
-🕙 10:00 AM
+        Their patience, dedication, encouragement and
+        guidance inspire generations to dream bigger,
+        work harder and become better people.
 
-</h3>
+        <br><br>
 
-<p>
+        On this special occasion, we warmly invite all
+        respected APF staff members to join us in celebrating
+        Teachers' Day 2026.
 
-Welcome Ceremony & Opening Speech
+        <br><br>
 
-</p>
+        Let us come together to express gratitude,
+        respect and appreciation for the mentors
+        who continue to shape our future.
 
-</div>
-
-<div class="card">
-
-<h3 style="color:#FFD700;">
-
-🎵 10:30 AM
-
-</h3>
-
-<p>
-
-Cultural Performances
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3 style="color:#FFD700;">
-
-🎤 11:15 AM
-
-</h3>
-
-<p>
-
-Teacher Appreciation Program
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3 style="color:#FFD700;">
-
-📸 12:00 PM
-
-</h3>
-
-<p>
-
-Group Photo Session
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3 style="color:#FFD700;">
-
-🍰 12:30 PM
-
-</h3>
-
-<p>
-
-Refreshments & Fellowship
-
-</p>
-
-</div>
-
-</div>
+    </p>
 
 </section>
 
 <!-- ==========================================
-        GOLD TIMELINE
+     QUICK INFORMATION
 ========================================== -->
 
+<section class="glass">
 
+    <h2 style="
+    font-family:'Playfair Display',serif;
+    color:#FFD700;
+    text-align:center;
+    margin-bottom:30px;
+    ">
 
-<p style="
-margin-top:35px;
-color:#FFD700;
-font-weight:700;
+        📌 Event Information
+
+    </h2>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <div style="font-size:52px;">📅</div>
+
+            <h3>Date</h3>
+
+            <p>
+                29 July 2026
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <div style="font-size:52px;">🕙</div>
+
+            <h3>Time</h3>
+
+            <p>
+                10:00 AM
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <div style="font-size:52px;">📍</div>
+
+            <h3>Venue</h3>
+
+            <p>
+                School Auditorium
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <div style="font-size:52px;">🎉</div>
+
+            <h3>Occasion</h3>
+
+            <p>
+                Teachers' Day Celebration
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+     SCROLL INDICATOR
+========================================== -->
+
+<div style="
+display:flex;
+justify-content:center;
+margin-top:25px;
+margin-bottom:45px;
 ">
 
-Made with ❤️ by the Students of the 16th Batch
+    <div style="
+    width:36px;
+    height:60px;
+    border:2px solid rgba(255,255,255,.45);
+    border-radius:30px;
+    display:flex;
+    justify-content:center;
+    padding-top:10px;
+    ">
 
-</p>
+        <div style="
+        width:8px;
+        height:8px;
+        background:#FFD700;
+        border-radius:50%;
+        animation:scrollDot 1.8s infinite;
+        ">
+        </div>
+
+    </div>
+
+</div>
+
+<style>
+
+@keyframes scrollDot{
+
+0%{
+transform:translateY(0);
+opacity:1;
+}
+
+50%{
+transform:translateY(18px);
+opacity:.35;
+}
+
+100%{
+transform:translateY(0);
+opacity:1;
+}
+
+}
+
+</style>
+<!-- ==========================================
+     COUNTDOWN
+========================================== -->
+
+<section id="countdown" class="glass">
+
+    <h2 style="
+    text-align:center;
+    font-family:'Playfair Display',serif;
+    color:#FFD700;
+    font-size:42px;
+    margin-bottom:15px;
+    ">
+
+        ⏳ Countdown To Celebration
+
+    </h2>
+
+    <p style="
+    text-align:center;
+    color:#ddd;
+    margin-bottom:35px;
+    font-size:18px;
+    ">
+
+        Every second brings us closer to celebrating
+        our respected teachers.
+
+    </p>
+
+    <div class="countdown">
+
+        <div class="time-box">
+            <span id="days">00</span>
+            Days
+        </div>
+
+        <div class="time-box">
+            <span id="hours">00</span>
+            Hours
+        </div>
+
+        <div class="time-box">
+            <span id="minutes">00</span>
+            Minutes
+        </div>
+
+        <div class="time-box">
+            <span id="seconds">00</span>
+            Seconds
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+     EVENT SCHEDULE
+========================================== -->
+
+<section class="glass">
+
+    <h2 style="
+    text-align:center;
+    color:#FFD700;
+    font-family:'Playfair Display',serif;
+    margin-bottom:35px;
+    ">
+
+        📅 Event Schedule
+
+    </h2>
+
+    <div style="
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    ">
+
+        <div class="card">
+
+            <h3>🕙 10:00 AM</h3>
+
+            <p>
+                Welcome Ceremony &
+                Opening Speech
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>🎶 10:30 AM</h3>
+
+            <p>
+                Cultural Dance &
+                Musical Performances
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>🎤 11:15 AM</h3>
+
+            <p>
+                Teacher Appreciation
+                Program
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>🎁 11:45 AM</h3>
+
+            <p>
+                Certificate &
+                Gift Presentation
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>📸 12:00 PM</h3>
+
+            <p>
+                Group Photography
+                Session
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>🍰 12:30 PM</h3>
+
+            <p>
+                Cake Cutting,
+                Refreshments &
+                Fellowship
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+     SPECIAL MESSAGE
+========================================== -->
+
+<section class="glass">
+
+    <h2 style="
+    text-align:center;
+    color:#FFD700;
+    font-family:'Playfair Display',serif;
+    ">
+
+        ❤️ A Message of Gratitude
+
+    </h2>
+
+    <p style="
+    text-align:center;
+    max-width:900px;
+    margin:30px auto;
+    line-height:2;
+    font-size:18px;
+    color:#eeeeee;
+    ">
+
+        Teachers are the architects of our future.
+
+        <br><br>
+
+        Their dedication, patience and encouragement
+        help students discover their potential and
+        achieve their dreams.
+
+        <br><br>
+
+        Today we celebrate every teacher whose
+        kindness and wisdom continue to inspire us.
+
+        <br><br>
+
+        Happy Teachers' Day!
+
+    </p>
+
+</section>
+
+<!-- ==========================================
+     THANK YOU
+========================================== -->
+
+<section class="glass">
+
+    <h2 style="
+    color:#FFD700;
+    text-align:center;
+    font-family:'Playfair Display',serif;
+    ">
+
+        🌟 Thank You
+
+    </h2>
+
+    <p style="
+    text-align:center;
+    max-width:850px;
+    margin:25px auto;
+    line-height:2;
+    color:#f2f2f2;
+    ">
+
+        We sincerely thank every respected teacher,
+        staff member and guest for making this
+        celebration memorable.
+
+        <br><br>
+
+        We look forward to celebrating together
+        and creating beautiful memories that will
+        last forever.
+
+    </p>
+
+</section>
+
+<!-- ==========================================
+     FOOTER
+========================================== -->
+
+<footer>
+
+    <h2 style="
+    font-size:32px;
+    color:#FFD700;
+    margin-bottom:15px;
+    ">
+
+        🎓 Teachers' Day 2026
+
+    </h2>
+
+    <p>
+
+        Made with ❤️ by the Students of the
+        <strong>16th Batch</strong>
+
+    </p>
+
+    <br>
+
+    <p style="color:#aaa;">
+
+        © 2026 All Rights Reserved
+
+    </p>
 
 </footer>
+<!-- ==========================================
+     BOTTOM NAVIGATION
+========================================== -->
 
 <nav class="bottom-nav">
 
 <a href="index.html" title="Home">
-
 🏠
-
 </a>
 
 <a href="program_no_gallery.html" title="Program">
-
 🎉
-
 </a>
 
 <a href="memories.html" title="Memories">
-
 💌
-
 </a>
 
 <a href="staff.html" title="Teachers">
-
 👮
+</a>
 
+</nav>
 
 <!-- ==========================================
-        CONFETTI LIBRARY
+     BACK TO TOP
+========================================== -->
+
+<a href="#" class="topBtn">
+⬆
+</a>
+
+<!-- Cursor Glow -->
+
+<div class="cursor"></div>
+
+<!-- ==========================================
+     CONFETTI LIBRARY
 ========================================== -->
 
 <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
 
 <script>
+
+/* ==========================================
+   CONFETTI
+========================================== */
+
+window.addEventListener("load",()=>{
+
+setTimeout(()=>{
+
+confetti({
+
+particleCount:180,
+spread:120,
+origin:{y:.6}
+
+});
+
+},500);
+
+});
 
 /* ==========================================
    COUNTDOWN
@@ -1062,42 +1069,40 @@ const now=new Date().getTime();
 
 const distance=targetDate-now;
 
-if(distance<0){
+if(distance<=0){
 
 clearInterval(countdown);
 
 document.querySelector(".countdown").innerHTML=`
-<h2 style="grid-column:1/-1;
+
+<h2 style="
+grid-column:1/-1;
 text-align:center;
-color:#FFD700;">
+color:#FFD700;
+">
+
 🎉 Happy Teachers' Day! 🎉
-</h2>`;
+
+</h2>
+
+`;
 
 return;
 
 }
 
-const days=Math.floor(distance/(1000*60*60*24));
+document.getElementById("days").textContent=Math.floor(distance/(1000*60*60*24));
 
-const hours=Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+document.getElementById("hours").textContent=Math.floor((distance%(1000*60*60*24))/(1000*60*60));
 
-const minutes=Math.floor((distance%(1000*60*60))/(1000*60));
+document.getElementById("minutes").textContent=Math.floor((distance%(1000*60*60))/60000);
 
-const seconds=Math.floor((distance%(1000*60))/1000);
-
-document.getElementById("days").textContent=days;
-
-document.getElementById("hours").textContent=hours;
-
-document.getElementById("minutes").textContent=minutes;
-
-document.getElementById("seconds").textContent=seconds;
+document.getElementById("seconds").textContent=Math.floor((distance%(1000*60))/1000);
 
 },1000);
 
-
 /* ==========================================
-   REVEAL ON SCROLL
+   SCROLL REVEAL
 ========================================== */
 
 const observer=new IntersectionObserver(entries=>{
@@ -1107,7 +1112,6 @@ entries.forEach(entry=>{
 if(entry.isIntersecting){
 
 entry.target.style.opacity=1;
-
 entry.target.style.transform="translateY(0)";
 
 }
@@ -1119,15 +1123,12 @@ entry.target.style.transform="translateY(0)";
 document.querySelectorAll(".glass,.card").forEach(el=>{
 
 el.style.opacity=0;
-
 el.style.transform="translateY(60px)";
-
 el.style.transition=".8s ease";
 
 observer.observe(el);
 
 });
-
 
 /* ==========================================
    CARD HOVER
@@ -1153,97 +1154,71 @@ rgba(255,255,255,.06))`;
 
 card.addEventListener("mouseleave",()=>{
 
-card.style.background="rgba(255,255,255,.08)";
+card.style.background="rgba(255,255,255,.07)";
 
 });
 
 });
-
 
 /* ==========================================
-   BUTTON RIPPLE
+   CURSOR
 ========================================== */
 
-document.querySelectorAll(".btn").forEach(btn=>{
+const cursor=document.querySelector(".cursor");
 
-btn.addEventListener("click",function(e){
+document.addEventListener("mousemove",(e)=>{
 
-const ripple=document.createElement("span");
+cursor.style.left=e.clientX+"px";
 
-const rect=this.getBoundingClientRect();
-
-const size=Math.max(rect.width,rect.height);
-
-ripple.style.width=size+"px";
-ripple.style.height=size+"px";
-
-ripple.style.position="absolute";
-ripple.style.borderRadius="50%";
-ripple.style.background="rgba(255,255,255,.45)";
-ripple.style.transform="scale(0)";
-ripple.style.left=e.offsetX-size/2+"px";
-ripple.style.top=e.offsetY-size/2+"px";
-ripple.style.animation="ripple .6s linear";
-
-this.style.position="relative";
-this.style.overflow="hidden";
-
-this.appendChild(ripple);
-
-setTimeout(()=>{
-
-ripple.remove();
-
-},600);
+cursor.style.top=e.clientY+"px";
 
 });
-
-});
-
 
 /* ==========================================
-   COUNTER ANIMATION
+   TOP BUTTON
 ========================================== */
 
-const counters=document.querySelectorAll("h1");
+document.querySelector(".topBtn").onclick=(e)=>{
 
-const animateCounter=counter=>{
+e.preventDefault();
 
-const target=+counter.innerText.replace(/\D/g,'');
+window.scrollTo({
 
-if(!target)return;
+top:0,
+behavior:"smooth"
 
-let current=0;
+});
 
-const step=Math.ceil(target/60);
+};
 
-const update=()=>{
+/* ==========================================
+   SMOOTH LINKS
+========================================== */
 
-current+=step;
+document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
 
-if(current>=target){
+anchor.addEventListener("click",function(e){
 
-counter.innerText=counter.innerText.replace(/\d+/,target);
+const target=document.querySelector(this.getAttribute("href"));
 
-return;
+if(target){
+
+e.preventDefault();
+
+target.scrollIntoView({
+
+behavior:"smooth"
+
+});
 
 }
 
-counter.innerText=counter.innerText.replace(/\d+/,current);
+});
 
-requestAnimationFrame(update);
-
-};
-
-update();
-
-};
-
-counters.forEach(c=>animateCounter(c));
-
+});
 
 /* ==========================================
-   RANDOM GOLD PARTICLES
+   FLOATING GOLD PARTICLES
 ========================================== */
 
 setInterval(()=>{
@@ -1251,38 +1226,29 @@ setInterval(()=>{
 const star=document.createElement("div");
 
 star.style.position="fixed";
-
 star.style.left=Math.random()*100+"vw";
-
-star.style.top="-20px";
-
+star.style.top="-10px";
 star.style.width="4px";
-
 star.style.height="4px";
-
-star.style.background="#FFD700";
-
 star.style.borderRadius="50%";
-
+star.style.background="#FFD700";
 star.style.opacity=".9";
-
 star.style.pointerEvents="none";
-
 star.style.zIndex="-1";
 
 document.body.appendChild(star);
 
-const speed=Math.random()*3+2;
+let y=-10;
 
-let pos=-20;
+const speed=Math.random()*3+2;
 
 const fall=setInterval(()=>{
 
-pos+=speed;
+y+=speed;
 
-star.style.top=pos+"px";
+star.style.top=y+"px";
 
-if(pos>window.innerHeight+20){
+if(y>window.innerHeight+20){
 
 clearInterval(fall);
 
@@ -1294,37 +1260,13 @@ star.remove();
 
 },350);
 
-
 /* ==========================================
-   SMOOTH NAVIGATION
+   BUTTON RIPPLE
 ========================================== */
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+const rippleStyle=document.createElement("style");
 
-anchor.addEventListener("click",function(e){
-
-e.preventDefault();
-
-document.querySelector(this.getAttribute("href"))
-
-.scrollIntoView({
-
-behavior:"smooth"
-
-});
-
-});
-
-});
-
-
-/* ==========================================
-   RIPPLE KEYFRAMES
-========================================== */
-
-const style=document.createElement("style");
-
-style.innerHTML=`
+rippleStyle.innerHTML=`
 
 @keyframes ripple{
 
@@ -1340,132 +1282,181 @@ opacity:0;
 
 `;
 
-document.head.appendChild(style);
+document.head.appendChild(rippleStyle);
 
 </script>
 <!-- ==========================================
-        PREMIUM LOADING SCREEN
+     FINAL POLISH
 ========================================== -->
 
+<style>
 
+/* Better focus states */
 
-/* Cursor Glow */
+a:focus,
+button:focus{
 
-.cursor{
-
-position:fixed;
-
-width:22px;
-height:22px;
-
-border-radius:50%;
-
-background:#FFD700;
-
-pointer-events:none;
-
-mix-blend-mode:screen;
-
-opacity:.45;
-
-transform:translate(-50%,-50%);
-
-transition:
-transform .08s linear;
-
-z-index:9999;
+outline:2px solid #FFD700;
+outline-offset:4px;
 
 }
 
-/* Floating Back To Top */
+/* Better image rendering */
 
+img{
+
+max-width:100%;
+display:block;
+
+}
+
+/* Smooth card animation */
+
+.card,
+.glass,
+.time-box,
+.logo,
 .topBtn{
 
-position:fixed;
+will-change:transform;
 
-right:20px;
+}
 
-bottom:110px;
+/* Better hover */
 
-width:55px;
+.time-box:hover{
 
-height:55px;
-
-border-radius:50%;
-
-background:
-
-linear-gradient(
-135deg,
-#FFD700,
-#D4AF37);
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-text-decoration:none;
-
-font-size:24px;
-
-color:#111;
-
-box-shadow:
-
-0 10px 30px rgba(255,215,0,.45);
+transform:translateY(-8px) scale(1.03);
 
 transition:.35s;
 
-z-index:999;
+}
+
+.logo:hover{
+
+transform:scale(1.04);
+
+transition:.35s;
 
 }
 
-.topBtn:hover{
+/* Footer */
 
-transform:translateY(-8px);
+footer strong{
+
+color:#FFD700;
 
 }
 
-/* Better Mobile */
+/* Small phones */
 
-@media(max-width:768px){
+@media(max-width:480px){
 
-.topBtn{
+.hero{
 
-right:14px;
-
-bottom:95px;
-
-width:50px;
-height:50px;
+padding:60px 15px 35px;
 
 }
 
 .hero h1{
 
-font-size:34px;
+font-size:30px;
 
 }
 
 .hero p{
 
 font-size:15px;
-
 line-height:1.8;
 
 }
 
 .glass{
 
+padding:20px;
+
 border-radius:22px;
+
+}
+
+.cards{
+
+gap:15px;
 
 }
 
 .card{
 
-padding:22px;
+padding:20px;
+
+}
+
+.time-box{
+
+padding:18px;
+
+}
+
+.time-box span{
+
+font-size:30px;
+
+}
+
+.bottom-nav{
+
+width:96%;
+
+padding:12px;
+
+}
+
+.bottom-nav a{
+
+font-size:24px;
+
+}
+
+.topBtn{
+
+right:14px;
+bottom:90px;
+
+width:50px;
+height:50px;
+
+font-size:20px;
+
+}
+
+.logo{
+
+width:110px;
+height:110px;
+
+}
+
+}
+
+/* Large screens */
+
+@media(min-width:1400px){
+
+.glass{
+
+max-width:1200px;
+
+}
+
+.hero h1{
+
+font-size:68px;
+
+}
+
+.hero p{
+
+font-size:20px;
 
 }
 
@@ -1473,60 +1464,5 @@ padding:22px;
 
 </style>
 
-<div class="cursor"></div>
-
-<a href="#" class="topBtn">
-
-⬆
-
-</a>
-
-<script>
-
-/* Hide Loader */
-
-window.addEventListener("load",()=>{
-
-setTimeout(()=>{
-
-loader.style.opacity="0";
-
-loader.style.visibility="hidden";
-
-},1200);
-
-});
-
-/* Cursor */
-
-const cursor=document.querySelector(".cursor");
-
-document.addEventListener("mousemove",(e)=>{
-
-cursor.style.left=e.clientX+"px";
-
-cursor.style.top=e.clientY+"px";
-
-});
-
-/* Top Button */
-
-document.querySelector(".topBtn").onclick=(e)=>{
-
-e.preventDefault();
-
-window.scrollTo({
-
-top:0,
-
-behavior:"smooth"
-
-});
-
-};
-
-</script>
-
 </body>
-
 </html>
