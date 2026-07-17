@@ -928,6 +928,7 @@ font-size:21px;
 </style>
 
 </head>
+<body>
 <!-- ==========================================
      PREMIUM BACKGROUND
 ========================================== -->
@@ -1172,7 +1173,7 @@ Made with ❤️ by the Students of the 16th Batch
 
 </div>
 
-</footer>
+</section>
 
 </div>
 <!-- END .container -->
@@ -1202,8 +1203,11 @@ Made with ❤️ by the Students of the 16th Batch
 </a>
 
 <a href="staff.html" title="Teachers">
-
 👮
+</a>
+</nav>
+
+<!--
 
 
 <!-- ==========================================
@@ -1676,47 +1680,12 @@ transform:translateY(-8px);
    BACK TO TOP
 ========================== */
 
-const back=document.getElementById("backTop");
-
-window.addEventListener("scroll",()=>{
-
-if(window.scrollY>500){
-
-back.classList.add("show");
-
-}else{
-
-back.classList.remove("show");
-
-}
-
-});
-
-back.onclick=()=>{
-
-window.scrollTo({
-
-top:0,
-
-behavior:"smooth"
-
-});
-
-};
-
-/* ==========================
-   PERFORMANCE
-========================== */
-
-document.querySelectorAll("img").forEach(img=>{
-
-img.loading="lazy";
-
-img.decoding="async";
-
-});
-
+</style>
+<script>
+const back=document.getElementById('backTop');
+window.addEventListener('scroll',()=>{back.classList.toggle('show',window.scrollY>500);});
+back.onclick=()=>window.scrollTo({top:0,behavior:'smooth'});
+document.querySelectorAll('img').forEach(img=>{img.loading='lazy';img.decoding='async';});
 </script>
-
 </body>
 </html>
